@@ -21,8 +21,8 @@ const CONFIG = {
 };
 
 /* ═══════════════════════════════════════════════════════════
-   § 2  MASTER CATALOG  — 88 títulos (actualizado al 2-ago-2026)
-       runtime = minutos. TV = total aproximado por temporada.
+   § 2  MASTER CATALOG  — 88 titles (updated to Aug 2, 2026)
+       runtime = minutes. TV = approximate total per season.
    ═══════════════════════════════════════════════════════════ */
 let CATALOG = [];
 
@@ -38,7 +38,7 @@ const UNIVERSE_META = {
 };
 
 function getCategoryKey(item) {
-  return item.category || 'Otros';
+  return item.category || 'Others';
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -250,13 +250,13 @@ function getFilteredItems() {
       const uni = (item.universe || '').toLowerCase();
       if (universe === 'core-only') {
         if (uni === 'mcu') {
-           if ((item.category || '').includes('Netflix')) return false;
+          if ((item.category || '').includes('Netflix')) return false;
         } else if (uni === 'x-men') {
-           // Allow X-Men
+          // Allow X-Men
         } else if (uni === 'sony') {
-           if (item.category !== 'Sony · Raimi Trilogy' && item.category !== 'Sony · The Amazing Spider-Man') return false;
+          if (item.category !== 'Sony · Raimi Trilogy' && item.category !== 'Sony · The Amazing Spider-Man') return false;
         } else {
-           return false;
+          return false;
         }
       } else if (universe === 'mcu-all') {
         if (uni !== 'mcu') return false;
@@ -399,7 +399,7 @@ function renderGrid(items) {
   if (!items.length) {
     grid.innerHTML = '';
     noResults.hidden = false;
-    info.textContent = 'Sin resultados';
+    info.textContent = 'No results';
     return;
   }
 
@@ -413,7 +413,7 @@ function renderGrid(items) {
         <h2>Essential Watchlist</h2>
       </div>
       <div class="cat-header-line"></div>
-      <span class="cat-count">${items.length} título${items.length !== 1 ? 's' : ''}</span>
+      <span class="cat-count">${items.length} title${items.length !== 1 ? 's' : ''}</span>
     </div>`;
     html += items.map(buildCardHTML).join('');
   } else {
@@ -438,7 +438,7 @@ function renderGrid(items) {
           <h2>${displayCat}</h2>
         </div>
         <div class="cat-header-line"></div>
-        <span class="cat-count">${grpItems.length} título${grpItems.length !== 1 ? 's' : ''}</span>
+        <span class="cat-count">${grpItems.length} title${grpItems.length !== 1 ? 's' : ''}</span>
       </div>`;
       }
       html += grpItems.map(buildCardHTML).join('');
@@ -454,7 +454,7 @@ function renderGrid(items) {
   };
 
   const watchedCnt = items.filter(i => state.watched.has(i.uid)).length;
-  info.textContent = `${items.length} de ${CATALOG.length} títulos · ${watchedCnt} vistos`;
+  info.textContent = `${items.length} of ${CATALOG.length} titles · ${watchedCnt} watched`;
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -465,8 +465,8 @@ function toggleWatched(uid) {
   if (!item || item.comingSoon || item.year === null) return;
 
   const wasWatched = state.watched.has(uid);
-  if (wasWatched) { state.watched.delete(uid); showToast(`❌ "${item.title}" desmarcado`); }
-  else { state.watched.add(uid); showToast(`✅ "${item.title}" marcado como visto`); }
+  if (wasWatched) { state.watched.delete(uid); showToast(`❌ "${item.title}" unmarked`); }
+  else { state.watched.add(uid); showToast(`✅ "${item.title}" marked as watched`); }
 
   saveWatched();
 
@@ -478,7 +478,7 @@ function toggleWatched(uid) {
     const btn = card.querySelector('.btn-watch');
     if (btn) {
       btn.className = `btn-watch ${now ? 'btn-watch-done' : 'btn-watch-pending'}`;
-      btn.textContent = now ? '✓ Visto · Desmarcar' : '+ Marcar como visto';
+      btn.textContent = now ? '✓ Watched · Unmark' : '+ Mark as watched';
     }
   }
 
@@ -501,11 +501,11 @@ function updateStats() {
   const pct = total > 0 ? Math.round((watchedT / total) * 100) : 0;
 
   document.getElementById('stat-total-time').textContent = fmtRuntimeLong(total);
-  document.getElementById('stat-total-count').textContent = `${all.length} títulos`;
+  document.getElementById('stat-total-count').textContent = `${all.length} titles`;
   document.getElementById('stat-watched-time').textContent = fmtRuntimeLong(watchedT);
-  document.getElementById('stat-watched-count').textContent = `${watched.length} títulos`;
+  document.getElementById('stat-watched-count').textContent = `${watched.length} titles`;
   document.getElementById('stat-remaining-time').textContent = fmtRuntimeLong(remainT);
-  document.getElementById('stat-remaining-count').textContent = `${all.length - watched.length} títulos`;
+  document.getElementById('stat-remaining-count').textContent = `${all.length - watched.length} titles`;
   document.getElementById('stat-percent').textContent = `${pct}%`;
 
   const fill = document.getElementById('progress-fill');
@@ -520,7 +520,7 @@ function updateStats() {
 function updateCountdown() {
   const diff = CONFIG.DOOMSDAY - new Date();
   const el = document.getElementById('countdown-days');
-  el.textContent = diff <= 0 ? '¡Es hoy!' : Math.ceil(diff / 86400000).toLocaleString('es-ES');
+  el.textContent = diff <= 0 ? 'Today!' : Math.ceil(diff / 86400000).toLocaleString('en-US');
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -537,7 +537,7 @@ function exportJSON() {
     download: `marvel-marathon-${new Date().toISOString().slice(0, 10)}.json`,
   });
   a.click(); URL.revokeObjectURL(a.href);
-  showToast('✅ JSON exportado');
+  showToast('✅ JSON exported');
 }
 
 function importJSON(file) {
@@ -546,14 +546,14 @@ function importJSON(file) {
     try {
       const data = JSON.parse(target.result);
       const ids = data.watchedUids || data.watched || [];
-      if (!Array.isArray(ids)) throw new Error('formato inválido');
+      if (!Array.isArray(ids)) throw new Error('invalid format');
       const valid = new Set(CATALOG.map(i => i.uid));
       let cnt = 0;
       ids.forEach(uid => { if (valid.has(uid)) { state.watched.add(uid); cnt++; } });
       saveWatched();
       renderGrid(getFilteredItems());
       updateStats();
-      showToast(`📥 ${cnt} títulos importados`);
+      showToast(`📥 ${cnt} titles imported`);
     } catch (err) { showToast(`⚠️ Error: ${err.message}`); }
   };
   reader.readAsText(file);
@@ -592,15 +592,15 @@ function attachEvents() {
     saveWatched();
     renderGrid(getFilteredItems());
     updateStats();
-    showToast(allWatched ? `❌ ${visible.length} títulos desmarcados` : `✅ ${visible.length} títulos marcados`);
+    showToast(allWatched ? `❌ ${visible.length} titles unmarked` : `✅ ${visible.length} titles marked`);
   });
 
   /* Reset */
   document.getElementById('btn-reset-all').addEventListener('click', () => {
-    if (!confirm('¿Borrar todo el progreso?')) return;
+    if (!confirm('Clear all progress?')) return;
     state.watched.clear(); saveWatched();
     renderGrid(getFilteredItems()); updateStats();
-    showToast('🔄 Progreso reiniciado');
+    showToast('🔄 Progress reset');
   });
 
   /* Essential Toggle */
@@ -648,7 +648,7 @@ async function init() {
       if (totalCountEl) totalCountEl.textContent = data.totalItemsReleased || CATALOG.length;
     }
   } catch (err) {
-    console.error('Error cargando peliculas.json', err);
+    console.error('Error loading peliculas.json', err);
   }
 
   /* Render immediately with fallback data — users see content at once */

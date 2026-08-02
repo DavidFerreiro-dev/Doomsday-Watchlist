@@ -884,7 +884,7 @@ h1 {
   flex-direction: column;
   position: relative;
   transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base), opacity var(--t-base);
-  animation: card-appear 0.35s var(--ease) both;
+  animation: card-appear 0.35s var(--ease) backwards;
   role: listitem;
 }
 

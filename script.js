@@ -258,15 +258,11 @@ function getFilteredItems() {
         } else {
           return false;
         }
-      } else if (universe === 'mcu-all') {
-        if (uni !== 'mcu') return false;
       } else if (universe === 'mcu-netflix') {
         if (uni !== 'mcu' || !(item.category || '').includes('Netflix')) return false;
       } else if (universe.startsWith('mcu-')) {
         const p = universe.slice(4);
         if (uni !== 'mcu' || !(item.category || '').includes(`Phase ${p}`)) return false;
-      } else if (universe === 'fox-all') {
-        if (uni !== 'x-men' && uni !== 'fantastic four') return false;
       } else if (universe === 'fantastic four') {
         if (uni === 'mcu' || !(item.category || '').includes('Fantastic Four')) return false;
       } else if (universe === 'x-men') {

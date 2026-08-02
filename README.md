@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/logoDoom.png" alt="Avengers Doomsday Logo" width="300" />
+  <img src="Assets/logoDoom.png" alt="Avengers Doomsday Logo" width="300" />
 
   # Which Movies Am I Missing Before Avengers: Doomsday?
 
@@ -20,7 +20,7 @@ With decades of movies and series spanning the Marvel Cinematic Universe (MCU), 
 
 ## 📸 Preview
 
-![Banner](assets/banner.jpg)
+![Banner](Assets/banner.jpg)
 
 ## 🛠️ Tech Stack
 

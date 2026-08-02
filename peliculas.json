@@ -1,0 +1,946 @@
+{
+  "generated": "2026-08-02",
+  "totalItems": 104,
+  "totalItemsReleased": 100,
+  "totalMovies": 78,
+  "totalTvShows": 26,
+  "fuente": "The Movie Database (TMDB) — https://www.themoviedb.org",
+  "catalog": [
+    {
+      "uid": "m-1726",
+      "tmdbId": 1726,
+      "title": "Iron Man",
+      "year": 2008,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 1 · Infinity Saga"
+    },
+    {
+      "uid": "m-1724",
+      "tmdbId": 1724,
+      "title": "The Incredible Hulk",
+      "year": 2008,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 1 · Infinity Saga"
+    },
+    {
+      "uid": "m-10138",
+      "tmdbId": 10138,
+      "title": "Iron Man 2",
+      "year": 2010,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 1 · Infinity Saga"
+    },
+    {
+      "uid": "m-10195",
+      "tmdbId": 10195,
+      "title": "Thor",
+      "year": 2011,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 1 · Infinity Saga"
+    },
+    {
+      "uid": "m-1771",
+      "tmdbId": 1771,
+      "title": "Captain America: The First Avenger",
+      "year": 2011,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 1 · Infinity Saga"
+    },
+    {
+      "uid": "m-24428",
+      "tmdbId": 24428,
+      "title": "The Avengers",
+      "year": 2012,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 1 · Infinity Saga"
+    },
+    {
+      "uid": "m-68721",
+      "tmdbId": 68721,
+      "title": "Iron Man 3",
+      "year": 2013,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 2 · Infinity Saga"
+    },
+    {
+      "uid": "m-76338",
+      "tmdbId": 76338,
+      "title": "Thor: The Dark World",
+      "year": 2013,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 2 · Infinity Saga"
+    },
+    {
+      "uid": "m-100402",
+      "tmdbId": 100402,
+      "title": "Captain America: The Winter Soldier",
+      "year": 2014,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 2 · Infinity Saga"
+    },
+    {
+      "uid": "m-118340",
+      "tmdbId": 118340,
+      "title": "Guardians of the Galaxy",
+      "year": 2014,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 2 · Infinity Saga"
+    },
+    {
+      "uid": "m-99861",
+      "tmdbId": 99861,
+      "title": "Avengers: Age of Ultron",
+      "year": 2015,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 2 · Infinity Saga"
+    },
+    {
+      "uid": "m-102899",
+      "tmdbId": 102899,
+      "title": "Ant-Man",
+      "year": 2015,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 2 · Infinity Saga"
+    },
+    {
+      "uid": "m-271110",
+      "tmdbId": 271110,
+      "title": "Captain America: Civil War",
+      "year": 2016,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 3 · Infinity Saga"
+    },
+    {
+      "uid": "m-284052",
+      "tmdbId": 284052,
+      "title": "Doctor Strange",
+      "year": 2016,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 3 · Infinity Saga"
+    },
+    {
+      "uid": "m-283995",
+      "tmdbId": 283995,
+      "title": "Guardians of the Galaxy Vol. 2",
+      "year": 2017,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 3 · Infinity Saga"
+    },
+    {
+      "uid": "m-315635",
+      "tmdbId": 315635,
+      "title": "Spider-Man: Homecoming",
+      "year": 2017,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 3 · Infinity Saga"
+    },
+    {
+      "uid": "m-284053",
+      "tmdbId": 284053,
+      "title": "Thor: Ragnarok",
+      "year": 2017,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 3 · Infinity Saga"
+    },
+    {
+      "uid": "m-284054",
+      "tmdbId": 284054,
+      "title": "Black Panther",
+      "year": 2018,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 3 · Infinity Saga"
+    },
+    {
+      "uid": "m-299536",
+      "tmdbId": 299536,
+      "title": "Avengers: Infinity War",
+      "year": 2018,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 3 · Infinity Saga"
+    },
+    {
+      "uid": "m-363088",
+      "tmdbId": 363088,
+      "title": "Ant-Man and the Wasp",
+      "year": 2018,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 3 · Infinity Saga"
+    },
+    {
+      "uid": "m-299537",
+      "tmdbId": 299537,
+      "title": "Captain Marvel",
+      "year": 2019,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 3 · Infinity Saga"
+    },
+    {
+      "uid": "m-299534",
+      "tmdbId": 299534,
+      "title": "Avengers: Endgame",
+      "year": 2019,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 3 · Infinity Saga"
+    },
+    {
+      "uid": "m-429617",
+      "tmdbId": 429617,
+      "title": "Spider-Man: Far From Home",
+      "year": 2019,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 3 · Infinity Saga"
+    },
+    {
+      "uid": "tv-61889",
+      "tmdbId": 61889,
+      "title": "Daredevil",
+      "year": 2015,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · The Defenders · Netflix"
+    },
+    {
+      "uid": "tv-38472",
+      "tmdbId": 38472,
+      "title": "Jessica Jones",
+      "year": 2015,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · The Defenders · Netflix"
+    },
+    {
+      "uid": "tv-62126",
+      "tmdbId": 62126,
+      "title": "Luke Cage",
+      "year": 2016,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · The Defenders · Netflix"
+    },
+    {
+      "uid": "tv-62285",
+      "tmdbId": 62285,
+      "title": "The Defenders",
+      "year": 2017,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · The Defenders · Netflix"
+    },
+    {
+      "uid": "tv-62127",
+      "tmdbId": 62127,
+      "title": "Iron Fist",
+      "year": 2017,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · The Defenders · Netflix"
+    },
+    {
+      "uid": "tv-67178",
+      "tmdbId": 67178,
+      "title": "The Punisher",
+      "year": 2017,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · The Defenders · Netflix"
+    },
+    {
+      "uid": "m-497698",
+      "tmdbId": 497698,
+      "title": "Black Widow",
+      "year": 2021,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Multiverse Saga"
+    },
+    {
+      "uid": "m-566525",
+      "tmdbId": 566525,
+      "title": "Shang-Chi and the Legend of the Ten Rings",
+      "year": 2021,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Multiverse Saga"
+    },
+    {
+      "uid": "m-524434",
+      "tmdbId": 524434,
+      "title": "Eternals",
+      "year": 2021,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Multiverse Saga"
+    },
+    {
+      "uid": "m-634649",
+      "tmdbId": 634649,
+      "title": "Spider-Man: No Way Home",
+      "year": 2021,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Multiverse Saga"
+    },
+    {
+      "uid": "m-453395",
+      "tmdbId": 453395,
+      "title": "Doctor Strange in the Multiverse of Madness",
+      "year": 2022,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Multiverse Saga"
+    },
+    {
+      "uid": "m-616037",
+      "tmdbId": 616037,
+      "title": "Thor: Love and Thunder",
+      "year": 2022,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Multiverse Saga"
+    },
+    {
+      "uid": "m-505642",
+      "tmdbId": 505642,
+      "title": "Black Panther: Wakanda Forever",
+      "year": 2022,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Multiverse Saga"
+    },
+    {
+      "uid": "tv-85271",
+      "tmdbId": 85271,
+      "title": "WandaVision",
+      "year": 2021,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Disney+"
+    },
+    {
+      "uid": "tv-88396",
+      "tmdbId": 88396,
+      "title": "The Falcon and the Winter Soldier",
+      "year": 2021,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Disney+"
+    },
+    {
+      "uid": "tv-84958-s1",
+      "tmdbId": 84958,
+      "title": "Loki (Season 1)",
+      "year": 2021,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Disney+"
+    },
+    {
+      "uid": "tv-91363-s1",
+      "tmdbId": 91363,
+      "title": "What If...? (Season 1)",
+      "year": 2021,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Disney+"
+    },
+    {
+      "uid": "tv-88329",
+      "tmdbId": 88329,
+      "title": "Hawkeye",
+      "year": 2021,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Disney+"
+    },
+    {
+      "uid": "tv-92749",
+      "tmdbId": 92749,
+      "title": "Moon Knight",
+      "year": 2022,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Disney+"
+    },
+    {
+      "uid": "tv-92782",
+      "tmdbId": 92782,
+      "title": "Ms. Marvel",
+      "year": 2022,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Disney+"
+    },
+    {
+      "uid": "tv-92783",
+      "tmdbId": 92783,
+      "title": "She-Hulk: Attorney at Law",
+      "year": 2022,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Disney+"
+    },
+    {
+      "uid": "m-894205",
+      "tmdbId": 894205,
+      "title": "Werewolf by Night",
+      "year": 2022,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Disney+"
+    },
+    {
+      "uid": "m-774752",
+      "tmdbId": 774752,
+      "title": "The Guardians of the Galaxy Holiday Special",
+      "year": 2022,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 4 · Disney+"
+    },
+    {
+      "uid": "m-640146",
+      "tmdbId": 640146,
+      "title": "Ant-Man and the Wasp: Quantumania",
+      "year": 2023,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 5 · Multiverse Saga"
+    },
+    {
+      "uid": "m-447365",
+      "tmdbId": 447365,
+      "title": "Guardians of the Galaxy Vol. 3",
+      "year": 2023,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 5 · Multiverse Saga"
+    },
+    {
+      "uid": "m-609681",
+      "tmdbId": 609681,
+      "title": "The Marvels",
+      "year": 2023,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 5 · Multiverse Saga"
+    },
+    {
+      "uid": "m-533535",
+      "tmdbId": 533535,
+      "title": "Deadpool & Wolverine",
+      "year": 2024,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 5 · Multiverse Saga"
+    },
+    {
+      "uid": "m-822119",
+      "tmdbId": 822119,
+      "title": "Captain America: Brave New World",
+      "year": 2025,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 5 · Multiverse Saga"
+    },
+    {
+      "uid": "m-986056",
+      "tmdbId": 986056,
+      "title": "Thunderbolts*",
+      "year": 2025,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 5 · Multiverse Saga"
+    },
+    {
+      "uid": "tv-114472",
+      "tmdbId": 114472,
+      "title": "Secret Invasion",
+      "year": 2023,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 5 · Disney+"
+    },
+    {
+      "uid": "tv-84958-s2",
+      "tmdbId": 84958,
+      "title": "Loki (Season 2)",
+      "year": 2023,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 5 · Disney+"
+    },
+    {
+      "uid": "tv-91363-s2",
+      "tmdbId": 91363,
+      "title": "What If...? (Season 2)",
+      "year": 2023,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 5 · Disney+"
+    },
+    {
+      "uid": "tv-122226",
+      "tmdbId": 122226,
+      "title": "Echo",
+      "year": 2024,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 5 · Disney+"
+    },
+    {
+      "uid": "tv-138501",
+      "tmdbId": 138501,
+      "title": "Agatha All Along",
+      "year": 2024,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 5 · Disney+"
+    },
+    {
+      "uid": "tv-91363-s3",
+      "tmdbId": 91363,
+      "title": "What If...? (Season 3)",
+      "year": 2024,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 5 · Disney+"
+    },
+    {
+      "uid": "tv-138503-s1",
+      "tmdbId": 138503,
+      "title": "Your Friendly Neighborhood Spider-Man (Season 1)",
+      "year": 2024,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 5 · Disney+"
+    },
+    {
+      "uid": "tv-138502-s1",
+      "tmdbId": 138502,
+      "title": "X-Men '97 (Season 1)",
+      "year": 2024,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 5 · Disney+"
+    },
+    {
+      "uid": "tv-202555",
+      "tmdbId": 202555,
+      "title": "Daredevil: Born Again",
+      "year": 2025,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 5 · Disney+"
+    },
+    {
+      "uid": "tv-114471",
+      "tmdbId": 114471,
+      "title": "Ironheart",
+      "year": 2025,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 6"
+    },
+    {
+      "uid": "m-617126",
+      "tmdbId": 617126,
+      "title": "The Fantastic Four: First Steps",
+      "year": 2025,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 6"
+    },
+    {
+      "uid": "m-969681",
+      "tmdbId": 969681,
+      "title": "Spider-Man: Brand New Day",
+      "year": 2026,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 6"
+    },
+    {
+      "uid": "m-1003596",
+      "tmdbId": 1003596,
+      "title": "Avengers: Doomsday",
+      "year": null,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 6"
+    },
+    {
+      "uid": "m-1003598",
+      "tmdbId": 1003598,
+      "title": "Avengers: Secret Wars",
+      "year": null,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 6"
+    },
+    {
+      "uid": "m-1439930",
+      "tmdbId": 1439930,
+      "title": "The Punisher: One Last Kill",
+      "year": 2026,
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Phase 6 · Disney+"
+    },
+    {
+      "uid": "tv-138502-s2",
+      "tmdbId": 138502,
+      "title": "X-Men '97 (Season 2)",
+      "year": 2026,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 6 · Disney+"
+    },
+    {
+      "uid": "tv-138503-s2",
+      "tmdbId": 138503,
+      "title": "Your Friendly Neighborhood Spider-Man (Season 2)",
+      "year": null,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 6 · Disney+"
+    },
+    {
+      "uid": "m-36657",
+      "tmdbId": 36657,
+      "title": "X-Men",
+      "year": 2000,
+      "type": "movie",
+      "universe": "X-Men",
+      "category": "X-Men (Fox) · Original Saga"
+    },
+    {
+      "uid": "m-36658",
+      "tmdbId": 36658,
+      "title": "X2: X-Men United",
+      "year": 2003,
+      "type": "movie",
+      "universe": "X-Men",
+      "category": "X-Men (Fox) · Original Saga"
+    },
+    {
+      "uid": "m-36668",
+      "tmdbId": 36668,
+      "title": "X-Men: The Last Stand",
+      "year": 2006,
+      "type": "movie",
+      "universe": "X-Men",
+      "category": "X-Men (Fox) · Original Saga"
+    },
+    {
+      "uid": "m-49538",
+      "tmdbId": 49538,
+      "title": "X-Men: First Class",
+      "year": 2011,
+      "type": "movie",
+      "universe": "X-Men",
+      "category": "X-Men (Fox) · Original Saga"
+    },
+    {
+      "uid": "m-127585",
+      "tmdbId": 127585,
+      "title": "X-Men: Days of Future Past",
+      "year": 2014,
+      "type": "movie",
+      "universe": "X-Men",
+      "category": "X-Men (Fox) · Original Saga"
+    },
+    {
+      "uid": "m-246655",
+      "tmdbId": 246655,
+      "title": "X-Men: Apocalypse",
+      "year": 2016,
+      "type": "movie",
+      "universe": "X-Men",
+      "category": "X-Men (Fox) · Original Saga"
+    },
+    {
+      "uid": "m-320288",
+      "tmdbId": 320288,
+      "title": "Dark Phoenix",
+      "year": 2019,
+      "type": "movie",
+      "universe": "X-Men",
+      "category": "X-Men (Fox) · Original Saga"
+    },
+    {
+      "uid": "m-340102",
+      "tmdbId": 340102,
+      "title": "The New Mutants",
+      "year": 2020,
+      "type": "movie",
+      "universe": "X-Men",
+      "category": "X-Men (Fox) · Original Saga"
+    },
+    {
+      "uid": "m-2080",
+      "tmdbId": 2080,
+      "title": "X-Men Origins: Wolverine",
+      "year": 2009,
+      "type": "movie",
+      "universe": "X-Men",
+      "category": "X-Men (Fox) · Wolverine"
+    },
+    {
+      "uid": "m-76170",
+      "tmdbId": 76170,
+      "title": "The Wolverine",
+      "year": 2013,
+      "type": "movie",
+      "universe": "X-Men",
+      "category": "X-Men (Fox) · Wolverine"
+    },
+    {
+      "uid": "m-263115",
+      "tmdbId": 263115,
+      "title": "Logan",
+      "year": 2017,
+      "type": "movie",
+      "universe": "X-Men",
+      "category": "X-Men (Fox) · Wolverine"
+    },
+    {
+      "uid": "m-293660",
+      "tmdbId": 293660,
+      "title": "Deadpool",
+      "year": 2016,
+      "type": "movie",
+      "universe": "X-Men",
+      "category": "X-Men (Fox) · Deadpool"
+    },
+    {
+      "uid": "m-383498",
+      "tmdbId": 383498,
+      "title": "Deadpool 2",
+      "year": 2018,
+      "type": "movie",
+      "universe": "X-Men",
+      "category": "X-Men (Fox) · Deadpool"
+    },
+    {
+      "uid": "m-9738",
+      "tmdbId": 9738,
+      "title": "Fantastic Four",
+      "year": 2005,
+      "type": "movie",
+      "universe": "Fantastic Four",
+      "category": "Fantastic Four · Fox"
+    },
+    {
+      "uid": "m-1979",
+      "tmdbId": 1979,
+      "title": "Fantastic Four: Rise of the Silver Surfer",
+      "year": 2007,
+      "type": "movie",
+      "universe": "Fantastic Four",
+      "category": "Fantastic Four · Fox"
+    },
+    {
+      "uid": "m-166424",
+      "tmdbId": 166424,
+      "title": "Fantastic Four (2015)",
+      "year": 2015,
+      "type": "movie",
+      "universe": "Fantastic Four",
+      "category": "Fantastic Four · Fox"
+    },
+    {
+      "uid": "m-36647",
+      "tmdbId": 36647,
+      "title": "Blade",
+      "year": 1998,
+      "type": "movie",
+      "universe": "New Line Cinema",
+      "category": "New Line Cinema · Blade"
+    },
+    {
+      "uid": "m-36586",
+      "tmdbId": 36586,
+      "title": "Blade II",
+      "year": 2002,
+      "type": "movie",
+      "universe": "New Line Cinema",
+      "category": "New Line Cinema · Blade"
+    },
+    {
+      "uid": "m-36648",
+      "tmdbId": 36648,
+      "title": "Blade: Trinity",
+      "year": 2004,
+      "type": "movie",
+      "universe": "New Line Cinema",
+      "category": "New Line Cinema · Blade"
+    },
+    {
+      "uid": "m-557",
+      "tmdbId": 557,
+      "title": "Spider-Man",
+      "year": 2002,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony · Raimi Trilogy"
+    },
+    {
+      "uid": "m-558",
+      "tmdbId": 558,
+      "title": "Spider-Man 2",
+      "year": 2004,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony · Raimi Trilogy"
+    },
+    {
+      "uid": "m-559",
+      "tmdbId": 559,
+      "title": "Spider-Man 3",
+      "year": 2007,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony · Raimi Trilogy"
+    },
+    {
+      "uid": "m-1930",
+      "tmdbId": 1930,
+      "title": "The Amazing Spider-Man",
+      "year": 2012,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony · The Amazing Spider-Man"
+    },
+    {
+      "uid": "m-102382",
+      "tmdbId": 102382,
+      "title": "The Amazing Spider-Man 2",
+      "year": 2014,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony · The Amazing Spider-Man"
+    },
+    {
+      "uid": "m-335983",
+      "tmdbId": 335983,
+      "title": "Venom",
+      "year": 2018,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony SSU"
+    },
+    {
+      "uid": "m-580489",
+      "tmdbId": 580489,
+      "title": "Venom: Let There Be Carnage",
+      "year": 2021,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony SSU"
+    },
+    {
+      "uid": "m-526896",
+      "tmdbId": 526896,
+      "title": "Morbius",
+      "year": 2022,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony SSU"
+    },
+    {
+      "uid": "m-912649",
+      "tmdbId": 912649,
+      "title": "Venom: The Last Dance",
+      "year": 2024,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony SSU"
+    },
+    {
+      "uid": "m-634492",
+      "tmdbId": 634492,
+      "title": "Madame Web",
+      "year": 2024,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony SSU"
+    },
+    {
+      "uid": "m-539972",
+      "tmdbId": 539972,
+      "title": "Kraven the Hunter",
+      "year": 2024,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony SSU"
+    },
+    {
+      "uid": "m-1250",
+      "tmdbId": 1250,
+      "title": "Ghost Rider",
+      "year": 2007,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony · Ghost Rider"
+    },
+    {
+      "uid": "m-71676",
+      "tmdbId": 71676,
+      "title": "Ghost Rider: Spirit of Vengeance",
+      "year": 2012,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony · Ghost Rider"
+    },
+    {
+      "uid": "m-324857",
+      "tmdbId": 324857,
+      "title": "Spider-Man: Into the Spider-Verse",
+      "year": 2018,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Verse"
+    },
+    {
+      "uid": "m-569094",
+      "tmdbId": 569094,
+      "title": "Spider-Man: Across the Spider-Verse",
+      "year": 2023,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Verse"
+    },
+    {
+      "uid": "m-911916",
+      "tmdbId": 911916,
+      "title": "Spider-Man: Beyond the Spider-Verse",
+      "year": null,
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Verse"
+    }
+  ]
+}

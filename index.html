@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Primary Meta Tags -->
+  <title>Which Movies Am I Missing Before Avengers: Doomsday?</title>
+  <meta name="title" content="Which Movies Am I Missing Before Avengers: Doomsday?">
+  <meta name="description" content="Track your progress and find out exactly which Marvel movies and TV shows you need to watch before Avengers: Doomsday. Includes MCU, X-Men, Sony Spider-Verse, and the Essential Watchlist.">
+  <meta name="keywords" content="Avengers Doomsday, Marvel Marathon, MCU Watchlist, X-Men Watchlist, Spider-Verse Watchlist, Marvel Tracker, Marvel Movies, Secret Wars, Marvel Timeline">
+  <meta name="author" content="David">
+  <link rel="canonical" href="https://doomsdaywatchlist.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://doomsdaywatchlist.com/">
+  <meta property="og:title" content="Which Movies Am I Missing Before Avengers: Doomsday?">
+  <meta property="og:description" content="Track your progress and find out exactly which Marvel movies and TV shows you need to watch before Avengers: Doomsday.">
+  <meta property="og:image" content="https://doomsdaywatchlist.com/Assets/banner.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://doomsdaywatchlist.com/">
+  <meta property="twitter:title" content="Which Movies Am I Missing Before Avengers: Doomsday?">
+  <meta property="twitter:description" content="Track your progress and find out exactly which Marvel movies and TV shows you need to watch before Avengers: Doomsday.">
+  <meta property="twitter:image" content="https://doomsdaywatchlist.com/Assets/banner.jpg">
+
+  <meta name="theme-color" content="#0f0f12">
+
+  <link rel="icon" type="image/png" href="Assets/favicon.png">
+  <link rel="shortcut icon" href="Assets/favicon.png">
+  <link rel="apple-touch-icon" href="Assets/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════
+       SITE HEADER
+  ═══════════════════════════════════════ -->
+  <header id="site-header">
+    <div class="header-particles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="header-glow-bg" aria-hidden="true"></div>
+    <div class="header-content">
+      <div class="header-title-block">
+        <div class="header-logo-wrap">
+          <img src="Assets/logoDoom.png" alt="Avengers: Doomsday" class="header-logo"
+            onerror="this.style.display='none'">
+        </div>
+        <div class="header-eyebrow">
+          <span class="eyebrow-dot"></span>
+          MARVEL MARATHON TRACKER
+          <span class="eyebrow-dot"></span>
+        </div>
+        <h1>
+          Which Movies Am I Missing<br>
+          <span class="title-gradient">Before Avengers: Doomsday?</span>
+        </h1>
+        <p class="header-tagline">
+          <span id="total-count-display">88</span> titles from the MCU, Fox, Sony and Netflix. Track your progress and
+          get ready for
+          <strong>December 18, 2026</strong>.
+        </p>
+      </div>
+      <div class="header-right">
+        <div class="countdown-card">
+          <div class="countdown-label">Days until Doomsday</div>
+          <div class="countdown-days" id="countdown-days">--</div>
+          <div class="countdown-unit">days</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════
+       STATS DASHBOARD
+  ═══════════════════════════════════════ -->
+  <section id="stats-dashboard" aria-label="Marathon statistics dashboard">
+    <div class="stats-container">
+      <div class="stat-card stat-total">
+        <div class="stat-icon-wrap">⏱️</div>
+        <div class="stat-info">
+          <div class="stat-label">Complete marathon</div>
+          <div class="stat-value" id="stat-total-time">0h 0m</div>
+          <div class="stat-count" id="stat-total-count" style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">0 titles</div>
+        </div>
+      </div>
+
+      <div class="stat-card stat-watched">
+        <div class="stat-icon-wrap">✅</div>
+        <div class="stat-info">
+          <div class="stat-label">Watched</div>
+          <div class="stat-value" id="stat-watched-time">0h 0m</div>
+          <div class="stat-count" id="stat-watched-count" style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">0 titles</div>
+        </div>
+      </div>
+
+      <div class="stat-card stat-remaining">
+        <div class="stat-icon-wrap">🎯</div>
+        <div class="stat-info">
+          <div class="stat-label">Remaining</div>
+          <div class="stat-value" id="stat-remaining-time">--h --m</div>
+          <div class="stat-count" id="stat-remaining-count" style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">-- titles</div>
+        </div>
+      </div>
+
+      <div class="stat-card stat-progress">
+        <div class="stat-progress-top">
+          <div class="stat-icon-wrap">📊</div>
+          <div class="stat-info">
+            <div class="stat-label">Your progress</div>
+            <div class="stat-value" id="stat-percent">0%</div>
+          </div>
+        </div>
+
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+          <div class="progress-glow" id="progress-glow"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✨ Essential Watchlist Full-Width Banner -->
+    <div class="essential-banner-card" id="btn-toggle-essential-card">
+      <div class="essential-content">
+        <div class="essential-icon">🎬</div>
+        <div class="essential-text">
+          <p>Got a job? Value your free time? Actually love yourself? Or is the premiere literally just around the corner? Relax! Here’s the essential watchlist to understand Avengers: Doomsday.</p>
+        </div>
+        <button class="btn-essential-action" id="text-toggle-essential">Show Essential Watchlist</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTROLS BAR
+  ═══════════════════════════════════════ -->
+  <section id="controls" aria-label="Filtros y acciones">
+    <div class="controls-row controls-top">
+      <!-- Search -->
+      <div class="search-wrapper" role="search">
+        <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <input type="search" id="search-input" placeholder="Search by title..." autocomplete="off"
+          aria-label="Search by title">
+        <button id="btn-clear-search" class="clear-btn" aria-label="Clear search" hidden>✕</button>
+      </div>
+
+      <!-- Filters -->
+      <div class="filters-row">
+        <div class="select-group">
+          <label for="filter-status" class="select-label">Status</label>
+          <select id="filter-status">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="watched">Watched</option>
+          </select>
+        </div>
+        <div class="select-group">
+          <label for="filter-format" class="select-label">Format</label>
+          <select id="filter-format">
+            <option value="all">All</option>
+            <option value="movie">Movies</option>
+            <option value="tv">TV Shows</option>
+          </select>
+        </div>
+        <div class="select-group">
+          <label for="filter-universe" class="select-label">Universe / Phase</label>
+          <select id="filter-universe">
+            <option value="all">All</option>
+            <option value="core-only">⭐ Core (MCU, X-Men, Spider-Man)</option>
+            
+            <optgroup label="── MCU · The Infinity Saga">
+              <option value="mcu-all">All MCU</option>
+              <option value="mcu-1">MCU · Phase 1</option>
+              <option value="mcu-2">MCU · Phase 2</option>
+              <option value="mcu-3">MCU · Phase 3</option>
+            </optgroup>
+            
+            <optgroup label="── MCU · The Multiverse Saga">
+              <option value="mcu-4">MCU · Phase 4</option>
+              <option value="mcu-5">MCU · Phase 5</option>
+              <option value="mcu-6">MCU · Phase 6</option>
+            </optgroup>
+            
+            <optgroup label="── MCU · The Defenders Saga">
+              <option value="mcu-netflix">The Defenders / Netflix</option>
+            </optgroup>
+            
+            <optgroup label="── 20th Century Fox">
+              <option value="fox-all">All Fox</option>
+              <option value="x-men">X-MEN</option>
+              <option value="fantastic four">Fantastic Four</option>
+            </optgroup>
+            
+            <optgroup label="── New Line Cinema">
+              <option value="new line cinema">Blade</option>
+            </optgroup>
+            
+            <optgroup label="── Sony Pictures">
+              <option value="sony-spiderverse">Spider-Verse</option>
+              <option value="sony-ssu">Sony's Spider-Man Universe</option>
+              <option value="sony-ghostrider">Ghost Rider</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-row controls-bottom">
+      <div class="results-info" id="results-info" aria-live="polite">Loading catalog…</div>
+      <div class="actions-row">
+        <button id="btn-mark-visible" class="btn-action btn-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          Mark visible as watched
+        </button>
+        <button id="btn-reset-all" class="btn-action btn-danger">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+            <polyline points="1 4 1 10 7 10" />
+            <path d="M3.51 15a9 9 0 1 0 .49-3.51" />
+          </svg>
+          Reset
+        </button>
+        <div class="btn-divider"></div>
+        <button id="btn-export-json" class="btn-action btn-export">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Exportar
+        </button>
+        <label class="btn-action btn-import" for="import-json-input">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="17 8 12 3 7 8" />
+            <line x1="12" y1="3" x2="12" y2="15" />
+          </svg>
+          Importar
+        </label>
+        <input type="file" id="import-json-input" accept=".json" class="sr-only">
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       MAIN CONTENT GRID
+  ═══════════════════════════════════════ -->
+  <main id="main-content">
+    <div id="movies-grid" class="movies-grid" role="list" aria-label="Catálogo de películas y series">
+      <!-- Cards rendered dynamically by script.js -->
+    </div>
+    <div id="no-results" class="no-results" hidden>
+      <div class="no-results-emoji">🔍</div>
+      <h3>Sin resultados</h3>
+      <p>Prueba con otros filtros o términos de búsqueda.</p>
+      <button id="btn-clear-filters" class="btn-ghost" style="margin-top:1rem;">Quitar filtros</button>
+    </div>
+  </main>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <p>Datos de <a href="https://www.themoviedb.org" target="_blank" rel="noopener">The Movie Database (TMDB)</a> ·
+        Marvel Marathon Tracker · Actualizado agosto 2026</p>
+      <p class="footer-disclaimer">⚠️ This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

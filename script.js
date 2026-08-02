@@ -450,15 +450,6 @@ function renderGrid(items) {
     const btn = e.target.closest('.btn-watch[data-uid]');
     if (btn) {
       toggleWatched(btn.dataset.uid);
-      if (state.watched.has(btn.dataset.uid)) {
-        const card = btn.closest('.movie-card');
-        if (card) {
-          card.classList.remove('just-watched');
-          void card.offsetWidth; // trigger reflow
-          card.classList.add('just-watched');
-          setTimeout(() => card.classList.remove('just-watched'), 600);
-        }
-      }
     }
   };
 

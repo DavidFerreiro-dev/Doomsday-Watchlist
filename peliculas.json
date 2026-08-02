@@ -1,9 +1,9 @@
 {
   "generated": "2026-08-02",
-  "totalItems": 104,
+  "totalItems": 105,
   "totalItemsReleased": 100,
   "totalMovies": 78,
-  "totalTvShows": 26,
+  "totalTvShows": 27,
   "fuente": "The Movie Database (TMDB) — https://www.themoviedb.org",
   "catalog": [
     {
@@ -599,6 +599,15 @@
       "type": "movie",
       "universe": "MCU",
       "category": "MCU · Phase 6"
+    },
+    {
+      "uid": "tv-198178",
+      "tmdbId": 198178,
+      "title": "Wonder Man",
+      "year": 2026,
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Phase 6 · Disney+"
     },
     {
       "uid": "m-1439930",

@@ -20,7 +20,7 @@ With decades of movies and series spanning the Marvel Cinematic Universe (MCU), 
 
 ## 📸 Preview
 
-![Banner](Assets/banner.jpg)
+![Banner](Assets/preview.png)
 
 ## 🛠️ Tech Stack
 

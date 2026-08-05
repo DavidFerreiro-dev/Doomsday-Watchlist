@@ -1,9 +1,9 @@
 {
   "generated": "2026-08-02",
-  "totalItems": 105,
-  "totalItemsReleased": 100,
+  "totalItems": 106,
+  "totalItemsReleased": 101,
   "totalMovies": 78,
-  "totalTvShows": 27,
+  "totalTvShows": 28,
   "fuente": "The Movie Database (TMDB) — https://www.themoviedb.org",
   "catalog": [
     {
@@ -950,6 +950,17 @@
       "type": "movie",
       "universe": "Sony",
       "category": "Sony · Animated Spider-Verse"
+    },
+    {
+  "uid": "tv-220102",
+  "tmdbId": 220102,
+  "title": "Spider-Noir",
+  "year": 2026,
+  "type": "TV",
+  "universe": "Sony",
+  "category": "Prime Video"
     }
+    
+    
   ]
 }

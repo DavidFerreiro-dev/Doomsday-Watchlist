@@ -31,8 +31,8 @@ let CATALOG = [];
    ═══════════════════════════════════════════════════════════ */
 const UNIVERSE_META = {
   mcu: { label: 'MCU', badgeClass: 'cat-badge-mcu' },
-  xmen: { label: 'X-Men (Fox)', badgeClass: 'cat-badge-xmen' },
-  sony: { label: 'Sony Spider-Verse', badgeClass: 'cat-badge-sony' },
+  xmen: { label: 'Fox', badgeClass: 'cat-badge-xmen' },
+  sony: { label: 'Sony', badgeClass: 'cat-badge-sony' },
   'fantastic four': { label: 'Fantastic Four (Fox)', badgeClass: 'cat-badge-fantastic-four' },
   'new line cinema': { label: 'New Line Cinema', badgeClass: 'cat-badge-newline' },
 };

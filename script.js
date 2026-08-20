@@ -25,6 +25,7 @@ const CONFIG = {
        runtime = minutes. TV = approximate total per season.
    ═══════════════════════════════════════════════════════════ */
 let CATALOG = [];
+let DISPLAY_CATALOG = [];
 
 /* ═══════════════════════════════════════════════════════════
    § 3  CATEGORY HELPERS
@@ -48,7 +49,7 @@ const state = {
   watched: new Set(JSON.parse(localStorage.getItem(CONFIG.LS_WATCHED) || '[]')),
   enriched: {},  // uid → { poster, title, runtime, cast:[] }
   filters: {
-    search: '', status: 'all', format: 'all', universe: 'all', essential: false,
+    search: '', status: 'all', format: 'all', universe: 'all', essential: false, disney: false,
   },
 };
 
@@ -86,6 +87,25 @@ const ESSENTIAL_LIST = [
   { title: "Thunderbolts*", optional: false },
   { title: "The Fantastic Four: First Steps", optional: false },
   { title: "Spider-Man: Brand New Day", optional: false }
+];
+
+const DISNEY_LIST = [
+  "X-Men",
+  "X2: X-Men United",
+  "Captain America: The First Avenger",
+  "The Avengers",
+  "Avengers: Infinity War",
+  "Avengers: Endgame",
+  "Loki (Season 1)",
+  "Loki (Season 2)",
+  "Shang-Chi and the Legend of the Ten Rings",
+  "Spider-Man: No Way Home",
+  "Black Panther: Wakanda Forever",
+  "Captain America: Brave New World",
+  "Deadpool & Wolverine",
+  "Doctor Strange in the Multiverse of Madness",
+  "Thunderbolts*",
+  "The Fantastic Four: First Steps"
 ];
 
 /* ═══════════════════════════════════════════════════════════
@@ -228,22 +248,33 @@ function updateCardInPlace(uid) {
    § 8  FILTER LOGIC
    ═══════════════════════════════════════════════════════════ */
 function getFilteredItems() {
-  const { search, status, format, universe, essential } = state.filters;
+  const { search, status, format, universe, essential, disney } = state.filters;
   const q = search.toLowerCase().trim();
 
-  let baseItems = CATALOG;
-  if (essential) {
+  let baseItems = DISPLAY_CATALOG;
+  if (disney) {
+    const disneyTitles = new Set(DISNEY_LIST);
+    baseItems = DISPLAY_CATALOG.filter(item => {
+      return disneyTitles.has(item.title);
+    });
+  } else if (essential) {
     const essentialTitles = new Set(ESSENTIAL_LIST.map(e => e.title));
-    baseItems = CATALOG.filter(item => essentialTitles.has(item.title));
+    baseItems = DISPLAY_CATALOG.filter(item => {
+      return essentialTitles.has(item.title);
+    });
   }
 
   const filtered = baseItems.filter(item => {
     if (q) {
-      const t = (state.enriched[item.uid]?.title || item.title).toLowerCase();
+      const targetUid = item.uid;
+      const t = (state.enriched[targetUid]?.title || item.title).toLowerCase();
       if (!t.includes(q)) return false;
     }
-    if (status === 'watched' && !state.watched.has(item.uid)) return false;
-    if (status === 'pending' && state.watched.has(item.uid)) return false;
+    
+    let isItemWatched = state.watched.has(item.uid);
+
+    if (status === 'watched' && !isItemWatched) return false;
+    if (status === 'pending' && isItemWatched) return false;
     if (format === 'movie' && item.type !== 'movie') return false;
     if (format === 'tv' && item.type !== 'tv') return false;
     if (universe !== 'all') {
@@ -279,11 +310,15 @@ function getFilteredItems() {
     return true;
   });
 
-  if (essential) {
+  if (disney) {
     filtered.sort((a, b) => {
-      const idxA = ESSENTIAL_LIST.findIndex(e => e.title === a.title);
-      const idxB = ESSENTIAL_LIST.findIndex(e => e.title === b.title);
-      return idxA - idxB;
+      const getIdx = (item) => DISNEY_LIST.indexOf(item.title);
+      return getIdx(a) - getIdx(b);
+    });
+  } else if (essential) {
+    filtered.sort((a, b) => {
+      const getIdx = (item) => ESSENTIAL_LIST.findIndex(e => e.title === item.title);
+      return getIdx(a) - getIdx(b);
     });
   }
   return filtered;
@@ -293,13 +328,15 @@ function getFilteredItems() {
    § 9  RENDERING
    ═══════════════════════════════════════════════════════════ */
 function buildCardHTML(item) {
-  const data = state.enriched[item.uid] || {};
+  const dataUid = item.uid;
+  const data = state.enriched[dataUid] || {};
   const title = esc(data.title || item.title);
   const runtime = data.runtime || 0;
   const cast = (data.cast || []).join(', ');
   const poster = data.poster;
-  const isWatched = state.watched.has(item.uid);
-  const isComingSoon = !!item.comingSoon || item.year === null;
+  
+  let isWatched = state.watched.has(item.uid);
+  let isComingSoon = !!item.comingSoon || item.year === null;
 
   /* Universe badge */
   const uni = (item.universe || '').toLowerCase();
@@ -334,15 +371,16 @@ function buildCardHTML(item) {
     <div class="cast-names">${esc(cast) || '–'}</div>
   </div>`;
 
-  const watchBtn = isComingSoon
+  const isEssentialActive = state.filters.essential;
+  let isOptional = false;
+  const essentialItem = isEssentialActive ? ESSENTIAL_LIST.find(e => e.title === item.title) : null;
+  isOptional = essentialItem && essentialItem.optional;
+
+  let watchBtn = isComingSoon
     ? `<button class="btn-watch" disabled>Coming Soon</button>`
     : isWatched
       ? `<button class="btn-watch btn-watch-done"   data-uid="${item.uid}">✓ Watched · Unmark</button>`
       : `<button class="btn-watch btn-watch-pending" data-uid="${item.uid}">+ Mark as watched</button>`;
-
-  const isEssentialActive = state.filters.essential;
-  const essentialItem = isEssentialActive ? ESSENTIAL_LIST.find(e => e.title === item.title) : null;
-  const isOptional = essentialItem && essentialItem.optional;
 
   return `
   <div class="movie-card${isWatched ? ' is-watched' : ''}${isComingSoon ? ' is-coming-soon' : ''}"
@@ -402,7 +440,17 @@ function renderGrid(items) {
   noResults.hidden = true;
 
   let html = '';
-  if (state.filters.essential) {
+  if (state.filters.disney) {
+    html = `<div class="cat-header">
+      <div class="cat-header-text">
+        <span class="cat-badge" style="background:#113ccf;color:white;border-color:#113ccf;">DISNEY</span>
+        <h2>Official Disney List</h2>
+      </div>
+      <div class="cat-header-line"></div>
+      <span class="cat-count">${items.length} title${items.length !== 1 ? 's' : ''}</span>
+    </div>`;
+    html += items.map(buildCardHTML).join('');
+  } else if (state.filters.essential) {
     html = `<div class="cat-header">
       <div class="cat-header-text">
         <span class="cat-badge cat-badge-mcu" style="background:var(--gold-alpha);color:var(--gold);border-color:var(--gold);">ESSENTIAL</span>
@@ -599,13 +647,32 @@ function attachEvents() {
     showToast('🔄 Progress reset');
   });
 
-  /* Essential Toggle */
-  const btnEssential = document.getElementById('btn-toggle-essential-card');
+  /* Essential & Disney Toggles */
   const textEssential = document.getElementById('text-toggle-essential');
-  if (btnEssential && textEssential) {
-    btnEssential.addEventListener('click', () => {
+  const btnDisney = document.getElementById('btn-toggle-disney');
+
+  if (textEssential) {
+    textEssential.addEventListener('click', () => {
       state.filters.essential = !state.filters.essential;
+      if (state.filters.essential) state.filters.disney = false;
+      
       textEssential.innerHTML = state.filters.essential ? 'Show Full Catalog' : 'Show Essential Watchlist';
+      if (btnDisney) {
+        btnDisney.innerHTML = `<img src="Assets/disney.png" alt="Disney" style="height: 18px; filter: brightness(0) invert(1);"> Official Disney List`;
+      }
+      
+      renderGrid(getFilteredItems());
+    });
+  }
+
+  if (btnDisney) {
+    btnDisney.addEventListener('click', () => {
+      state.filters.disney = !state.filters.disney;
+      if (state.filters.disney) state.filters.essential = false;
+      
+      btnDisney.innerHTML = state.filters.disney ? `<img src="Assets/disney.png" alt="Disney" style="height: 18px; filter: brightness(0) invert(1);"> Show Full Catalog` : `<img src="Assets/disney.png" alt="Disney" style="height: 18px; filter: brightness(0) invert(1);"> Official Disney List`;
+      
+      if (textEssential) textEssential.innerHTML = 'Show Essential Watchlist';
       renderGrid(getFilteredItems());
     });
   }
@@ -642,6 +709,10 @@ async function init() {
       CATALOG = data.catalog || [];
       const totalCountEl = document.getElementById('total-count-display');
       if (totalCountEl) totalCountEl.textContent = data.totalItemsReleased || CATALOG.length;
+      
+      for (const item of CATALOG) {
+        DISPLAY_CATALOG.push({ ...item, isGroup: false });
+      }
     }
   } catch (err) {
     console.error('Error loading peliculas.json', err);

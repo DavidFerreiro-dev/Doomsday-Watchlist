@@ -133,13 +133,19 @@
     </div>
 
     <!-- ✨ Essential Watchlist Full-Width Banner -->
-    <div class="essential-banner-card" id="btn-toggle-essential-card">
+    <div class="essential-banner-card" id="banner-essential-disney">
       <div class="essential-content">
         <div class="essential-icon">🎬</div>
-        <div class="essential-text">
+        <div class="essential-text" style="flex: 1;">
           <p>Got a job? Value your free time? Actually love yourself? Or is the premiere literally just around the corner? Relax! Here’s the essential watchlist to understand Avengers: Doomsday.</p>
         </div>
-        <button class="btn-essential-action" id="text-toggle-essential">Show Essential Watchlist</button>
+        <div class="essential-actions" style="display: flex; gap: 0.75rem; flex-wrap: wrap; flex-shrink: 0; align-items: center;">
+          <button class="btn-essential-action" id="text-toggle-essential">Show Essential Watchlist</button>
+          <button class="btn-essential-action" id="btn-toggle-disney" style="background: #113ccf; border-color: #113ccf; color: white;">
+             <img src="Assets/disney.png" alt="Disney" style="height: 18px; filter: brightness(0) invert(1);"> 
+             Official Disney List
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -279,8 +285,7 @@
   <!-- Footer -->
   <footer id="site-footer">
     <div class="footer-inner">
-      <p>Datos de <a href="https://www.themoviedb.org" target="_blank" rel="noopener">The Movie Database (TMDB)</a> ·
-        Marvel Marathon Tracker · Actualizado agosto 2026</p>
+      <p>Data provided by <a href="https://www.themoviedb.org" target="_blank" rel="noopener">The Movie Database (TMDB)</a> &bull; Marvel Marathon Tracker &bull; Last updated August 2026</p>
       <p class="footer-disclaimer">⚠️ This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
     </div>
   </footer>

@@ -620,13 +620,22 @@ h1 {
   background: var(--gold-alpha);
   color: var(--gold);
   border: 1px solid var(--gold);
-  padding: 0.75rem 1.25rem;
+  padding: 0 1rem;
   font-size: 0.9rem;
   font-weight: 700;
   border-radius: var(--r-sm);
   cursor: pointer;
   white-space: nowrap;
   transition: all var(--t-fast);
+  width: 230px;
+  height: 48px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .btn-essential-action:hover {
@@ -1483,4 +1492,69 @@ h1 {
 
   .movies-grid { gap: 0.5rem; }
   .movie-card  { break-inside: avoid; }
+}
+
+
+/* ── TV SEASONS ────────────────────────────────────────── */
+.seasons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px;
+  border-radius: var(--r-sm);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.season-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color var(--t-fast);
+}
+.season-label:hover {
+  color: var(--text-primary);
+}
+.season-label.is-watched {
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+.season-label.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.cb-season-watch {
+  cursor: pointer;
+  accent-color: var(--accent);
+  width: 14px;
+  height: 14px;
+}
+.season-label.disabled .cb-season-watch {
+  cursor: not-allowed;
+}
+
+.s-badge {
+  font-size: 0.6rem;
+  padding: 2px 4px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-left: auto;
+}
+.s-badge-ess {
+  background: rgba(226, 54, 54, 0.15);
+  color: #ff5252;
+  border: 1px solid rgba(226, 54, 54, 0.3);
+}
+.s-badge-opt {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }

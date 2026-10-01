@@ -141,6 +141,87 @@ function saveWatched() {
   localStorage.setItem(CONFIG.LS_WATCHED, JSON.stringify([...state.watched]));
 }
 
+function getCatalogStats(catalog) {
+  const totalItems = catalog.length;
+  const totalMovies = catalog.filter(item => item.type === 'movie').length;
+  const totalTvShows = catalog.filter(item => item.type === 'tv').length;
+  const totalItemsReleased = catalog.filter(item => {
+    const releaseDate = getItemReleaseDate(item);
+    return !!releaseDate && releaseDate.getTime() <= Date.now();
+  }).length;
+
+  return { totalItems, totalItemsReleased, totalMovies, totalTvShows };
+}
+
+function updateCatalogStatsDisplay() {
+  const totalCountEl = document.getElementById('total-count-display');
+  if (!totalCountEl) return;
+
+  const stats = getCatalogStats(CATALOG);
+  totalCountEl.textContent = stats.totalItemsReleased;
+}
+
+function resolvePosterSrc(poster) {
+  if (!poster) return null;
+  return /^https?:\/\//i.test(poster) ? poster : `${CONFIG.TMDB_W342}${poster}`;
+}
+
+function formatReleaseDate(date) {
+  if (!date) return 'Loading…';
+  return new Intl.DateTimeFormat('es-ES', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+  }).format(date);
+}
+
+function parseReleaseDate(value) {
+  if (!value) return null;
+  if (value instanceof Date) return Number.isNaN(value.getTime()) ? null : value;
+
+  if (typeof value === 'number') {
+    return new Date(value, 0, 1);
+  }
+
+  const text = String(value).trim();
+  if (!text) return null;
+
+  const slashMatch = text.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (slashMatch) {
+    const [, day, month, year] = slashMatch;
+    return new Date(Number(year), Number(month) - 1, Number(day));
+  }
+
+  const dashMatch = text.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (dashMatch) {
+    const [, year, month, day] = dashMatch;
+    return new Date(Number(year), Number(month) - 1, Number(day));
+  }
+
+  const parsed = new Date(text);
+  return Number.isNaN(parsed.getTime()) ? null : parsed;
+}
+
+function getItemReleaseDate(item, data = state.enriched[item.uid]) {
+  if (!item) return null;
+  return parseReleaseDate(data?.releaseDate);
+}
+
+function isItemReleased(item, data = state.enriched[item.uid]) {
+  const releaseDate = getItemReleaseDate(item, data);
+  if (releaseDate && releaseDate.getTime() <= Date.now()) return true;
+
+  return false;
+}
+
+function getNextProjectCountdownItem() {
+  const now = Date.now();
+  return CATALOG
+    .map(item => ({ item, data: state.enriched[item.uid], releaseDate: getItemReleaseDate(item) }))
+    .filter(entry => entry.releaseDate && entry.releaseDate.getTime() > now && !isItemReleased(entry.item, entry.data))
+    .sort((a, b) => a.releaseDate - b.releaseDate)[0] || null;
+}
+
 /* ═══════════════════════════════════════════════════════════
    § 6  TMDB API — Bearer auth, per-request timeout
    ═══════════════════════════════════════════════════════════ */
@@ -166,11 +247,13 @@ async function fetchItemData(item) {
   const d = await tmdbFetch(ep);
   if (!d) return null;
 
-  const poster = d.poster_path || null;
-  const title = d.title || d.name || item.title;
+  const customImage = item['Custom Image'] ?? item.customImage;
+  const customImageUrl = typeof customImage === 'string' ? customImage : null;
+  const poster = customImageUrl || d.poster_path || null;
+  const title = customImage ? item.title : (d.title || d.name || item.title);
   const runtime = item.type === 'movie' && d.runtime > 0 ? d.runtime : 0;
   const cast = (d.credits?.cast || []).slice(0, 4).map(a => a.name);
-  return { poster, title, runtime, cast };
+  return { poster, title, runtime, cast, status: d.status || null, releaseDate: d.release_date || d.first_air_date || null };
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -189,6 +272,8 @@ async function enrichAllItems() {
       })
     );
     updateStats();
+    updateCatalogStatsDisplay();
+    updateCountdown();
     if (i + CONFIG.BATCH_SIZE < items.length) await sleep(CONFIG.BATCH_DELAY);
   }
 }
@@ -197,16 +282,17 @@ async function enrichAllItems() {
 function updateCardInPlace(uid) {
   const card = document.querySelector(`.movie-card[data-uid="${uid}"]`);
   if (!card) return;
-  const data = state.enriched[uid];
-  if (!data) return;
   const item = CATALOG.find(i => i.uid === uid);
+
+  if (!item) return;
+  card.outerHTML = buildCardHTML(item);
 
   /* Poster */
   if (data.poster) {
     const ph = card.querySelector('.poster-placeholder');
     if (ph) {
       const img = document.createElement('img');
-      img.src = `${CONFIG.TMDB_W342}${data.poster}`;
+      img.src = resolvePosterSrc(data.poster);
       img.alt = data.title || '';
       img.loading = 'lazy';
       img.style.cssText = 'opacity:0;transition:opacity .4s ease';
@@ -333,10 +419,17 @@ function buildCardHTML(item) {
   const title = esc(data.title || item.title);
   const runtime = data.runtime || 0;
   const cast = (data.cast || []).join(', ');
-  const poster = data.poster;
+  const customImage = item['Custom Image'] ?? item.customImage;
+  const customImageUrl = typeof customImage === 'string' ? customImage : null;
+  const poster = data.poster || customImageUrl;
+  const hasCustomImage = !!customImage;
+  const isReleasedNow = isItemReleased(item, data);
+  const nextMovie = !isReleasedNow ? getNextProjectCountdownItem() : null;
+  const isCountdownTarget = !!nextMovie && nextMovie.item.uid === item.uid;
+  const releaseDate = getItemReleaseDate(item, data);
   
   let isWatched = state.watched.has(item.uid);
-  let isComingSoon = !!item.comingSoon || item.year === null;
+  let isComingSoon = !isReleasedNow;
 
   /* Universe badge */
   const uni = (item.universe || '').toLowerCase();
@@ -358,9 +451,21 @@ function buildCardHTML(item) {
   const isSpecial = item.category && item.category.includes('Special');
   const typeLbl = isSpecial ? 'Special'
     : item.type === 'tv' ? 'TV Show' : 'Movie';
+  const releaseLabel = formatReleaseDate(releaseDate);
 
-  const posterHTML = poster
-    ? `<img src="${CONFIG.TMDB_W342}${poster}" alt="${title}" loading="lazy">`
+  const daysLeft = isCountdownTarget && releaseDate
+    ? Math.max(0, Math.ceil((releaseDate.getTime() - Date.now()) / 86400000))
+    : null;
+
+  const posterHTML = hasCustomImage
+    ? poster
+      ? `<img src="${esc(resolvePosterSrc(poster))}" alt="${title}" loading="lazy">`
+      : `<div class="poster-placeholder">
+         <span class="placeholder-emoji">🎬</span>
+         <span class="placeholder-text">Custom Image</span>
+       </div>`
+    : poster
+    ? `<img src="${esc(resolvePosterSrc(poster))}" alt="${title}" loading="lazy">`
     : `<div class="poster-placeholder">
          <span class="placeholder-emoji">🎬</span>
          <span class="placeholder-text">${title}</span>
@@ -377,7 +482,9 @@ function buildCardHTML(item) {
   isOptional = essentialItem && essentialItem.optional;
 
   let watchBtn = isComingSoon
-    ? `<button class="btn-watch" disabled>Coming Soon</button>`
+    ? isCountdownTarget
+      ? `<button class="btn-watch btn-watch-countdown" disabled data-countdown-uid="${item.uid}">⏳ ${daysLeft} days left</button>`
+      : `<button class="btn-watch btn-watch-locked" disabled>Locked until release</button>`
     : isWatched
       ? `<button class="btn-watch btn-watch-done"   data-uid="${item.uid}">✓ Watched · Unmark</button>`
       : `<button class="btn-watch btn-watch-pending" data-uid="${item.uid}">+ Mark as watched</button>`;
@@ -393,7 +500,7 @@ function buildCardHTML(item) {
       ? '<span class="badge badge-optional-top">OPTIONAL</span>'
       : `<span class="badge badge-universe ${uniCls}">${uniLbl}</span>`
     }
-          ${isComingSoon ? '<span class="badge badge-coming-soon">Coming Soon</span>' : ''}
+          ${isComingSoon ? (isCountdownTarget ? '<span class="badge badge-next-release">NEXT RELEASE</span>' : '<span class="badge badge-coming-soon">Coming Soon</span>') : ''}
         </div>
         <div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end;">
           <span class="badge badge-type">${isSpecial ? '⭐ ' : ''}${typeLbl}</span>
@@ -405,7 +512,7 @@ function buildCardHTML(item) {
     <div class="card-body">
       <div class="card-title">${title}</div>
       <div class="card-meta">
-        <span class="card-year">${item.year || 'Coming Soon'}</span>
+        <span class="card-year">${esc(releaseLabel)}</span>
         ${runtime > 0 ? `<span class="card-runtime">${fmtRuntime(runtime)}</span>` : ''}
       </div>
       <div class="card-footer">
@@ -506,7 +613,10 @@ function renderGrid(items) {
    ═══════════════════════════════════════════════════════════ */
 function toggleWatched(uid) {
   const item = CATALOG.find(i => i.uid === uid);
-  if (!item || item.comingSoon || item.year === null) return;
+  if (!item) return;
+
+  const isReleasedNow = isItemReleased(item);
+  if (!isReleasedNow && !state.watched.has(uid)) return;
 
   const wasWatched = state.watched.has(uid);
   if (wasWatched) { state.watched.delete(uid); showToast(`❌ "${item.title}" unmarked`); }
@@ -514,17 +624,7 @@ function toggleWatched(uid) {
 
   saveWatched();
 
-  /* Update card in-place without re-rendering grid */
-  const card = document.querySelector(`.movie-card[data-uid="${uid}"]`);
-  if (card) {
-    const now = state.watched.has(uid);
-    card.classList.toggle('is-watched', now);
-    const btn = card.querySelector('.btn-watch');
-    if (btn) {
-      btn.className = `btn-watch ${now ? 'btn-watch-done' : 'btn-watch-pending'}`;
-      btn.textContent = now ? '✓ Watched · Unmark' : '+ Mark as watched';
-    }
-  }
+  updateCardInPlace(uid);
 
   updateStats();
 }
@@ -537,7 +637,7 @@ function getRuntime(item) {
 }
 
 function updateStats() {
-  const all = CATALOG.filter(i => !i.comingSoon && i.year !== null);
+  const all = CATALOG.filter(i => isItemReleased(i));
   const total = all.reduce((s, i) => s + getRuntime(i), 0);
   const watched = all.filter(i => state.watched.has(i.uid));
   const watchedT = watched.reduce((s, i) => s + getRuntime(i), 0);
@@ -565,6 +665,24 @@ function updateCountdown() {
   const diff = CONFIG.DOOMSDAY - new Date();
   const el = document.getElementById('countdown-days');
   el.textContent = diff <= 0 ? 'Today!' : Math.ceil(diff / 86400000).toLocaleString('en-US');
+
+  const nextProject = getNextProjectCountdownItem();
+  const nextLabel = document.getElementById('next-project-title');
+  const nextDays = document.getElementById('next-project-days');
+  const nextUnit = document.getElementById('next-project-unit');
+  if (nextProject) {
+    const daysUntil = Math.ceil((nextProject.releaseDate.getTime() - Date.now()) / 86400000);
+    if (nextLabel) nextLabel.textContent = nextProject.item.title;
+    if (nextDays) nextDays.textContent = daysUntil <= 0 ? 'Today!' : daysUntil.toLocaleString('en-US');
+    if (nextUnit) nextUnit.textContent = daysUntil <= 0 ? 'available now' : 'days';
+
+    const countdownBtn = document.querySelector('.btn-watch-countdown[data-countdown-uid]');
+    if (countdownBtn) countdownBtn.textContent = `⏳ ${daysUntil <= 0 ? 'Today!' : `${daysUntil} days left`}`;
+  } else {
+    if (nextLabel) nextLabel.textContent = 'No upcoming project';
+    if (nextDays) nextDays.textContent = '--';
+    if (nextUnit) nextUnit.textContent = 'days';
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -630,7 +748,11 @@ function attachEvents() {
 
   /* Mark all visible */
   document.getElementById('btn-mark-visible').addEventListener('click', () => {
-    const visible = getFilteredItems().filter(i => !i.comingSoon && i.year !== null);
+    const visible = getFilteredItems().filter(i => isItemReleased(i));
+    if (!visible.length) {
+      showToast('⚠️ No released titles visible');
+      return;
+    }
     const allWatched = visible.every(i => state.watched.has(i.uid));
     visible.forEach(i => allWatched ? state.watched.delete(i.uid) : state.watched.add(i.uid));
     saveWatched();
@@ -707,8 +829,7 @@ async function init() {
     if (res.ok) {
       const data = await res.json();
       CATALOG = data.catalog || [];
-      const totalCountEl = document.getElementById('total-count-display');
-      if (totalCountEl) totalCountEl.textContent = data.totalItemsReleased || CATALOG.length;
+      updateCatalogStatsDisplay();
       
       for (const item of CATALOG) {
         DISPLAY_CATALOG.push({ ...item, isGroup: false });

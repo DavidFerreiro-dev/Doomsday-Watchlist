@@ -40,9 +40,30 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="characters.js"></script>
 </head>
 
 <body>
+
+  <!-- ═══════════════════════════════════════
+       LOADING SCREEN
+  ═══════════════════════════════════════ -->
+  <div id="app-loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <img src="Assets/logoDoom.png" alt="Doomsday Watchlist" class="loader-site-logo">
+      </div>
+      <h2 class="loader-title">Doomsday Watchlist</h2>
+      <p class="loader-subtitle">Loading Marvel universe data…</p>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar-track">
+          <div id="loader-bar-fill" class="loader-bar-fill"></div>
+        </div>
+        <span id="loader-bar-label" class="loader-bar-label">0 / 0</span>
+      </div>
+      <p id="loader-status" class="loader-status">Fetching catalog…</p>
+    </div>
+  </div>
 
   <!-- ═══════════════════════════════════════
        SITE HEADER
@@ -168,9 +189,10 @@
           <circle cx="11" cy="11" r="8" />
           <line x1="21" y1="21" x2="16.65" y2="16.65" />
         </svg>
-        <input type="search" id="search-input" placeholder="Search by title..." autocomplete="off"
-          aria-label="Search by title">
+        <input type="search" id="search-input" placeholder="Busca título, personaje o actor. Usa comas para combinar..." autocomplete="off"
+          aria-label="Buscar por título, personaje o actor">
         <button id="btn-clear-search" class="clear-btn" aria-label="Clear search" hidden>✕</button>
+        <button id="btn-apply-search" class="search-apply-btn" type="button">Apply</button>
       </div>
 
       <!-- Filters -->
@@ -221,14 +243,37 @@
             <optgroup label="── New Line Cinema">
               <option value="new line cinema">Blade</option>
             </optgroup>
+
+            <optgroup label="── Universal Pictures">
+              <option value="universal">Hulk</option>
+            </optgroup>
             
             <optgroup label="── Sony Pictures">
               <option value="sony-spiderverse">Spider-Verse</option>
               <option value="sony-ssu">Sony's Spider-Man Universe</option>
               <option value="sony-ghostrider">Ghost Rider</option>
             </optgroup>
+
           </select>
         </div>
+        <div class="select-group">
+          <label for="filter-sort" class="select-label">Order</label>
+          <select id="filter-sort">
+            <option value="default">Catalog order</option>
+            <option value="duration-asc">Duration: shortest first</option>
+            <option value="duration-desc">Duration: longest first</option>
+            <option value="rating-desc">Rating: highest first</option>
+            <option value="rating-asc">Rating: lowest first</option>
+          </select>
+        </div>
+        <!-- Character filter button -->
+        <button id="btn-char-filter" class="btn-action" style="white-space:nowrap; align-self:flex-end;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <span id="char-filter-label">Characters</span>
+        </button>
       </div>
     </div>
 
@@ -248,6 +293,7 @@
           </svg>
           Reset
         </button>
+
         <div class="btn-divider"></div>
         <button id="btn-export-json" class="btn-action btn-export">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
@@ -284,6 +330,32 @@
       <button id="btn-clear-filters" class="btn-ghost" style="margin-top:1rem;">Quitar filtros</button>
     </div>
   </main>
+
+
+
+  <!-- Character Filter Modal -->
+  <div id="char-filter-modal" class="modal-overlay modal-hidden" role="dialog" aria-label="Filter by character">
+    <div class="modal-box char-modal-box">
+      <div class="char-modal-header">
+        <h2>🎭 Filter by Character</h2>
+        <button id="btn-close-char" class="btn-ghost">✕</button>
+      </div>
+      <div class="char-search-wrap">
+        <input type="search" id="char-search-input" placeholder="Search character or actor…" autocomplete="off">
+      </div>
+      <div id="char-modal-body" class="char-modal-body">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="char-modal-footer">
+        <label id="char-match-mode" class="char-match-mode" hidden>
+          <input type="checkbox" id="char-require-all">
+          <span>Require all selected people</span>
+        </label>
+        <button id="btn-char-clear" class="btn-ghost">Clear filter</button>
+        <button id="btn-char-apply" class="btn-primary">Apply</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Toast -->
   <div id="toast" class="toast" role="status" aria-live="polite"></div>

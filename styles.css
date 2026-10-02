@@ -224,6 +224,11 @@ html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; max-width: 
 
 body {
   background: var(--bg);
+  background-image: 
+    radial-gradient(circle at 10% 40%, rgba(22, 163, 74, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 60%, rgba(22, 163, 74, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 50% 95%, rgba(22, 163, 74, 0.04) 0%, transparent 50%);
+  background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-body);
   line-height: 1.6;
@@ -448,7 +453,7 @@ body.char-filter-mode #char-filter-modal {
 /* ── 5. HEADER ──────────────────────────────────────────── */
 #site-header {
   position: relative;
-  padding: 3.5rem var(--page-pad) 3rem;
+  padding: 18rem var(--page-pad) 6rem;
   overflow: hidden;
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -457,9 +462,9 @@ body.char-filter-mode #char-filter-modal {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 80% at 15% 50%, rgba(230,57,70,0.20) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 60% at 85% 20%, rgba(212,175,55,0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 45% 70% at 55% 90%, rgba(74,144,217,0.12) 0%, transparent 60%);
+    radial-gradient(ellipse 70% 80% at 15% 50%, rgba(34, 197, 94, 0.20) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 60% at 85% 20%, rgba(22, 163, 74, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 70% at 55% 90%, rgba(16, 185, 129, 0.12) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -473,36 +478,7 @@ body.char-filter-mode #char-filter-modal {
   z-index: -1;
 }
 
-/* Animated particles */
-.header-particles {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 1;
-}
 
-.header-particles span {
-  position: absolute;
-  display: block;
-  width: 3px; height: 3px;
-  background: var(--gold);
-  border-radius: 50%;
-  opacity: 0;
-  will-change: transform, opacity;
-  animation: float-particle var(--dur, 8s) var(--delay, 0s) ease-in-out infinite;
-}
-
-.header-particles span:nth-child(1)  { left: 10%; top: 20%; --dur: 9s;  --delay: 0s;   --tx: 30px;  --ty: -40px; }
-.header-particles span:nth-child(2)  { left: 25%; top: 70%; --dur: 12s; --delay: 1s;   --tx: -20px; --ty: -60px; background: var(--red); }
-.header-particles span:nth-child(3)  { left: 40%; top: 30%; --dur: 7s;  --delay: 2s;   --tx: 40px;  --ty: 30px; }
-.header-particles span:nth-child(4)  { left: 60%; top: 60%; --dur: 10s; --delay: 0.5s; --tx: -30px; --ty: -50px; background: var(--blue); }
-.header-particles span:nth-child(5)  { left: 75%; top: 15%; --dur: 8s;  --delay: 3s;   --tx: 20px;  --ty: 40px; }
-.header-particles span:nth-child(6)  { left: 85%; top: 75%; --dur: 11s; --delay: 1.5s; --tx: -40px; --ty: -30px; background: var(--red); }
-.header-particles span:nth-child(7)  { left: 15%; top: 50%; --dur: 9s;  --delay: 4s;   --tx: 50px;  --ty: 20px; }
-.header-particles span:nth-child(8)  { left: 50%; top: 85%; --dur: 13s; --delay: 2.5s; --tx: -50px; --ty: -40px; background: var(--blue); }
-.header-particles span:nth-child(9)  { left: 90%; top: 40%; --dur: 8s;  --delay: 0.8s; --tx: -20px; --ty: 50px; }
-.header-particles span:nth-child(10) { left: 35%; top: 10%; --dur: 10s; --delay: 3.5s; --tx: 30px;  --ty: 60px; background: var(--gold-light); }
 
 .header-content {
   position: relative;
@@ -797,6 +773,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 1.2rem;
+  flex-wrap: wrap;
 }
 
 .essential-icon {
@@ -806,7 +783,7 @@ h1 {
 }
 
 .essential-text {
-  flex: 1;
+  flex: 1 1 280px;
 }
 
 .essential-text p {
@@ -1186,7 +1163,6 @@ body.search-mode .clear-btn { right: 4.9rem; }
 .header-particles span,
 .eyebrow-dot,
 .progress-glow,
-.badge-coming-soon,
 .badge-next-release,
 .skeleton,
 .loader-site-logo {

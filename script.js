@@ -147,8 +147,18 @@ function matchesSearchSegment(item, segment) {
   if (!normalized) return true;
 
   const data = state.enriched[item.uid] || {};
+  const title = normalizeSearchText(data.title || item.title);
+  const universe = normalizeSearchText(item.universe);
+  const releaseDate = getItemReleaseDate(item, data);
+  const year = releaseDate ? releaseDate.getFullYear().toString() : '';
   const cast = (data.cast || []).map(normalizeSearchText);
-  return cast.some(actor => actor === normalized || actor.includes(normalized));
+  
+  if (title.includes(normalized)) return true;
+  if (universe.includes(normalized)) return true;
+  if (year.includes(normalized)) return true;
+  if (cast.some(actor => actor.includes(normalized))) return true;
+
+  return false;
 }
 
 let _toastTimer;
@@ -289,24 +299,56 @@ async function tmdbFetch(endpoint) {
 
 async function fetchItemData(item) {
   if (!item.tmdbId) return null;
-  const ep = item.type === 'movie'
-    ? `/movie/${item.tmdbId}?append_to_response=credits&language=en-US`
-    : `/tv/${item.tmdbId}?append_to_response=credits&language=en-US`;
+  
+  let seasonMatch = item.uid.match(/-s(\d+)$/);
+  if (!seasonMatch) seasonMatch = item.title.match(/\(Season (\d+)\)/);
+  const seasonNumber = seasonMatch ? parseInt(seasonMatch[1], 10) : null;
+
+  let ep = '';
+  if (item.type === 'movie') {
+    ep = `/movie/${item.tmdbId}?append_to_response=credits&language=en-US`;
+  } else if (seasonNumber !== null) {
+    ep = `/tv/${item.tmdbId}/season/${seasonNumber}?append_to_response=credits,aggregate_credits&language=en-US`;
+  } else {
+    ep = `/tv/${item.tmdbId}?append_to_response=credits,aggregate_credits&language=en-US`;
+  }
+
   const d = await tmdbFetch(ep);
   if (!d) return null;
 
   const customImage = item['Custom Image'] ?? item.customImage;
   const customImageUrl = typeof customImage === 'string' ? customImage : null;
   const poster = customImageUrl || d.poster_path || null;
-  const title = customImage ? item.title : (d.title || d.name || item.title);
+  
+  let title = item.title;
+  if (!customImage) {
+    if (seasonNumber !== null && d.name) {
+      // Sometimes TMDB season name is just 'Season 1'.
+      // If it doesn't contain the show name, we might want to keep item.title (e.g. 'Loki (Season 1)')
+      title = item.title;
+    } else {
+      title = d.title || d.name || item.title;
+    }
+  }
+
   const runtime = item.type === 'movie' && d.runtime > 0 ? d.runtime : 0;
-  const credits = (d.credits?.cast || []).slice(0, 20);
+  
+  let rawCast = d.credits?.cast || [];
+  if (d.aggregate_credits?.cast?.length > rawCast.length) {
+    rawCast = d.aggregate_credits.cast;
+  }
+  
+  const credits = rawCast.slice(0, 20);
   const cast = credits.map(a => a.name);
-  const roles = credits.map(a => ({ name: a.name, character: a.character || '' }));
+  const roles = credits.map(a => ({ name: a.name, character: (a.roles ? a.roles[0]?.character : a.character) || '' }));
   const rating = d.vote_average ? d.vote_average.toFixed(1) : null;
-  const episodes = item.type === 'tv' ? d.number_of_episodes : null;
+  const episodes = seasonNumber !== null 
+    ? (d.episodes ? d.episodes.length : null) 
+    : (item.type === 'tv' ? d.number_of_episodes : null);
+  
   const customDate = item['Custom Date'] ?? item.customDate;
-  const releaseDate = customDate ? parseReleaseDate(customDate) : (d.release_date || d.first_air_date);
+  const releaseDate = customDate ? parseReleaseDate(customDate) : (d.release_date || d.first_air_date || d.air_date);
+  
   return { poster, title, runtime, cast, roles, status: d.status || null, releaseDate, rating, episodes };
 }
 
@@ -635,6 +677,22 @@ function renderGrid(items) {
       <span class="cat-count">${items.length} title${items.length !== 1 ? 's' : ''}</span>
     </div>`;
     html += items.map(buildCardHTML).join('');
+  } else if (state.filters.sort !== 'default') {
+    let sortName = 'Sorted Results';
+    if (state.filters.sort === 'rating-desc') sortName = 'Highest Rated';
+    if (state.filters.sort === 'rating-asc') sortName = 'Lowest Rated';
+    if (state.filters.sort === 'duration-desc') sortName = 'Longest Duration';
+    if (state.filters.sort === 'duration-asc') sortName = 'Shortest Duration';
+
+    html = `<div class="cat-header">
+      <div class="cat-header-text">
+        <span class="cat-badge" style="background:#555;color:white;border-color:#555;">SORTED</span>
+        <h2>${sortName}</h2>
+      </div>
+      <div class="cat-header-line"></div>
+      <span class="cat-count">${items.length} title${items.length !== 1 ? 's' : ''}</span>
+    </div>`;
+    html += items.map(buildCardHTML).join('');
   } else {
     const groups = groupItems(items);
     for (const [catName, grpItems] of groups) {
@@ -813,38 +871,27 @@ function attachEvents() {
   const applySearchEl = document.getElementById('btn-apply-search');
   let searchTimer;
 
-  const setSearchMode = active => {
-    state.searchMode = active;
-    document.body.classList.toggle('search-mode', active);
-    if (!active) {
-      renderGrid(getFilteredItems());
-      updateStats();
-    }
-  };
 
-  searchEl.addEventListener('focus', () => setSearchMode(true));
-  searchEl.addEventListener('blur', () => {
-    if (!searchEl.value.trim()) setSearchMode(false);
-  });
+
+
 
   searchEl.addEventListener('input', () => {
     state.filters.search = searchEl.value;
-    setSearchMode(true);
     clearEl.hidden = !searchEl.value;
     clearTimeout(searchTimer);
     searchTimer = setTimeout(() => {
-      if (!state.searchMode) renderGrid(getFilteredItems());
+      renderGrid(getFilteredItems());
+      updateStats();
     }, 120);
   });
   clearEl.addEventListener('click', () => {
     searchEl.value = state.filters.search = '';
-    setSearchMode(true);
     clearEl.hidden = true;
     renderGrid(getFilteredItems());
+    updateStats();
     searchEl.focus();
   });
   applySearchEl?.addEventListener('click', () => {
-    setSearchMode(false);
     searchEl.blur();
   });
 

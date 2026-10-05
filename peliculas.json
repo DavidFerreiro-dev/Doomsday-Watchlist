@@ -99,6 +99,54 @@
       "category": "MCU · Phase 2 · Infinity Saga"
     },
     {
+      "uid": "tv-61889",
+      "tmdbId": 61889,
+      "title": "Daredevil",
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · The Defenders · Netflix"
+    },
+    {
+      "uid": "tv-38472",
+      "tmdbId": 38472,
+      "title": "Jessica Jones",
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · The Defenders · Netflix"
+    },
+    {
+      "uid": "tv-62126",
+      "tmdbId": 62126,
+      "title": "Luke Cage",
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · The Defenders · Netflix"
+    },
+    {
+      "uid": "tv-62127",
+      "tmdbId": 62127,
+      "title": "Iron Fist",
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · The Defenders · Netflix"
+    },
+    {
+      "uid": "tv-62285",
+      "tmdbId": 62285,
+      "title": "The Defenders",
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · The Defenders · Netflix"
+    },
+    {
+      "uid": "tv-67178",
+      "tmdbId": 67178,
+      "title": "The Punisher",
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · The Defenders · Netflix"
+    },
+    {
       "uid": "m-271110",
       "tmdbId": 271110,
       "title": "Captain America: Civil War",
@@ -185,54 +233,6 @@
       "type": "movie",
       "universe": "MCU",
       "category": "MCU · Phase 3 · Infinity Saga"
-    },
-    {
-      "uid": "tv-61889",
-      "tmdbId": 61889,
-      "title": "Daredevil",
-      "type": "tv",
-      "universe": "MCU",
-      "category": "MCU · The Defenders · Netflix"
-    },
-    {
-      "uid": "tv-38472",
-      "tmdbId": 38472,
-      "title": "Jessica Jones",
-      "type": "tv",
-      "universe": "MCU",
-      "category": "MCU · The Defenders · Netflix"
-    },
-    {
-      "uid": "tv-62126",
-      "tmdbId": 62126,
-      "title": "Luke Cage",
-      "type": "tv",
-      "universe": "MCU",
-      "category": "MCU · The Defenders · Netflix"
-    },
-    {
-      "uid": "tv-62127",
-      "tmdbId": 62127,
-      "title": "Iron Fist",
-      "type": "tv",
-      "universe": "MCU",
-      "category": "MCU · The Defenders · Netflix"
-    },
-    {
-      "uid": "tv-62285",
-      "tmdbId": 62285,
-      "title": "The Defenders",
-      "type": "tv",
-      "universe": "MCU",
-      "category": "MCU · The Defenders · Netflix"
-    },
-    {
-      "uid": "tv-67178",
-      "tmdbId": 67178,
-      "title": "The Punisher",
-      "type": "tv",
-      "universe": "MCU",
-      "category": "MCU · The Defenders · Netflix"
     },
     {
       "uid": "m-497698",

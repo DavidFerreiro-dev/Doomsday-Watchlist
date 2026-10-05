@@ -6,7 +6,7 @@
   <p><strong>A fan-made Marvel marathon tracker to help you prepare for the biggest MCU event of the next era.</strong></p>
 
   <p>
-    <a href="https://davidferreiro-dev.github.io/Doomsday-Watchlist/" target="_blank" rel="noopener noreferrer">Open the live site</a>
+    <a href="https://davidferreiro-dev.github.io/Doomsday-Watchlist/" target="_blank" rel="noopener noreferrer">https://davidferreiro-dev.github.io/Doomsday-Watchlist/</a>
   </p>
 </div>
 
@@ -32,11 +32,17 @@ It is designed for people who want to:
 
 This project is a static site, so there is no build step or dependency installation required.
 
-1. Download the project or clone the repository.
-2. Open the folder in VS Code or your editor of choice.
-3. Open `index.html` directly in a browser for a quick check, or run a simple local server for a better development experience.
-4. Edit `index.html`, `styles.css`, `script.js`, or `peliculas.json` as needed.
-5. Refresh the browser to see your changes.
+Clone the repository with Git:
+
+```bash
+git clone https://github.com/DavidFerreiro-dev/Doomsday-Watchlist.git
+cd Doomsday-Watchlist
+```
+
+1. Open the folder in VS Code or your editor of choice.
+2. Open `index.html` directly in a browser for a quick check, or run a simple local server for a better development experience.
+3. Edit `index.html`, `styles.css`, `script.js`, or `peliculas.json` as needed.
+4. Refresh the browser to see your changes.
 
 If you want to run a quick local server, you can use something like `python3 -m http.server` from the project folder and open the shown local address in your browser.
 

@@ -12,7 +12,7 @@
 
 With decades of movies and series spanning the Marvel Cinematic Universe (MCU), Fox's X-Men, Sony's Spider-Verse, and Netflix's Defenders, it can be overwhelming to know what to watch. This tracker solves that by providing:
 
-- **Complete Catalog**: Tracks 88 titles across the MCU, Fox, Sony, and Netflix.
+- **Complete Catalog**: Tracks 112 titles across the MCU, Fox, Sony, and Netflix.
 - **Progress Tracking**: Keep tabs on your watched movies/series, calculate total watch time, and view your remaining progress percentage.
 - **Essential Watchlist**: Short on time? Filter the catalog to show only the absolutely essential titles required to understand *Avengers: Doomsday*.
 - **Advanced Filtering**: Filter by Universe, Phase, Format (Movie/TV), and Status.

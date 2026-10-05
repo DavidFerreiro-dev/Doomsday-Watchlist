@@ -1,10 +1,12 @@
 <div align="center">
   <img src="Assets/logoDoom.png" alt="Avengers: Doomsday logo" width="300" />
   <br>
-  # Which Movies Am I Missing Before Avengers: Doomsday?
+  <h1>Which Movies Am I Missing Before Avengers: Doomsday?</h1>
+
+  <p><strong>A fan-made Marvel marathon tracker to help you prepare for the biggest MCU event of the next era.</strong></p>
 
   <p>
-    <strong>A fan-made Marvel marathon tracker to help you prepare for the biggest MCU event of the next era.</strong>
+    <a href="https://davidferreiro-dev.github.io/Doomsday-Watchlist/" target="_blank" rel="noopener noreferrer">Open the live site</a>
   </p>
 </div>
 
@@ -25,6 +27,20 @@ It is designed for people who want to:
 - estimate how much time is left before they are fully prepared,
 - filter the list by status, format, universe, or phase,
 - keep a clean and practical watchlist without needing any backend or database.
+
+## 🧪 Local installation and editing
+
+This project is a static site, so there is no build step or dependency installation required.
+
+1. Download the project or clone the repository.
+2. Open the folder in VS Code or your editor of choice.
+3. Open `index.html` directly in a browser for a quick check, or run a simple local server for a better development experience.
+4. Edit `index.html`, `styles.css`, `script.js`, or `peliculas.json` as needed.
+5. Refresh the browser to see your changes.
+
+If you want to run a quick local server, you can use something like `python3 -m http.server` from the project folder and open the shown local address in your browser.
+
+The project works well with static hosting such as GitHub Pages or Vercel.
 
 ## ✨ Features
 
@@ -87,15 +103,21 @@ You can also host the project on any static hosting service, such as GitHub Page
 - `Assets/` — images, icons, and visual assets
 - `LICENSE` — project license
 
-## 🧾 Data and references
+## 🖼️ Credits
 
-This project uses data and metadata from [The Movie Database (TMDB)](https://www.themoviedb.org/). It is a fan-made, non-profit app created for entertainment and planning purposes.
+### Marvel and related rights holders
 
-The project is not affiliated with, endorsed by, or sponsored by Marvel Studios, Disney, Fox, Sony, or TMDB.
+This project is a fan-made tribute based on Marvel-related characters, films, series, logos, and trademarks. All original intellectual property belongs to Marvel Studios, The Walt Disney Company, 20th Century Studios, Sony Pictures, and their respective rights holders.
+
+### TMDB
+
+This project uses The Movie Database (TMDB) for metadata such as posters, runtimes, release information, and related title data. TMDB is not affiliated with this project and does not endorse it.
 
 ## ⚖️ License
 
-This project is distributed under the [MIT License](LICENSE).
+This project is distributed under the MIT License. If you create a derivative project, you must keep the copyright and license notice from the original MIT license and include the disclaimer that comes with it.
+
+The MIT license allows you to reuse, modify, and redistribute the code, including in derivative projects, as long as the required notice is preserved. It does not grant rights to Marvel, Disney, Fox, Sony, or TMDB trademarks, logos, posters, or other third-party assets. If your derivative uses those brands or data, you are responsible for making sure you have the right to do so and for keeping the same non-affiliation disclaimers.
 
 ---
 
@@ -104,9 +126,6 @@ This project is distributed under the [MIT License](LICENSE).
     <strong>Doomsday Watchlist</strong><br>
     Updated: October 2026<br>
     Made by David Ferreiro
-  </p>
-  <p>
-    GitHub Repository: <a href="https://github.com/DavidFerreiro-dev/Doomsday-Watchlist" target="_blank" rel="noopener noreferrer">https://github.com/DavidFerreiro-dev/Doomsday-Watchlist</a>
   </p>
   <p>
     © 2026 David Ferreiro · Built for Marvel fans preparing for Avengers: Doomsday

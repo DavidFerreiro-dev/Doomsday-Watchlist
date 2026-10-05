@@ -3,170 +3,150 @@
   <br>
   <h1>Which Movies Am I Missing Before Avengers: Doomsday?</h1>
 
-  <p><strong>A fan-made Marvel marathon tracker to help you prepare for the biggest MCU event of the next era.</strong></p>
+  <p><strong>An interactive Marvel marathon tracker designed to help you prepare for the next big MCU event.</strong></p>
 
   <p>
-    <a href="https://davidferreiro-dev.github.io/Doomsday-Watchlist/" target="_blank" rel="noopener noreferrer">https://davidferreiro-dev.github.io/Doomsday-Watchlist/</a>
+    🔗 <strong>Live Demo:</strong>
+    <a href="https://davidferreiro-dev.github.io/Doomsday-Watchlist/" target="_blank" rel="noopener noreferrer">
+      https://davidferreiro-dev.github.io/Doomsday-Watchlist/
+    </a>
   </p>
 </div>
 
-## 🍿 What is this?
+---
 
-**Which Movies Am I Missing Before Avengers: Doomsday?** is a comprehensive, interactive tracker designed to help you prepare for the upcoming release of *Avengers: Doomsday* (December 2026). 
+## 🍿 About the Project
 
-With decades of movies and series spanning the Marvel Cinematic Universe (MCU), Fox's X-Men, Sony's Spider-Verse, and Netflix's Defenders, it can be overwhelming to know what to watch. This tracker solves that by providing:
+**Which Movies Am I Missing Before Avengers: Doomsday?** is a clean, interactive web application created to help Marvel fans organize, track, and complete their marathon leading up to the release of *Avengers: Doomsday* (December 2026).
 
-- **Complete Catalog**: Tracks 112 titles across the MCU, Fox, Sony, and Netflix.
-- **Progress Tracking**: Keep tabs on your watched movies/series, calculate total watch time, and view your remaining progress percentage.
-- **Essential Watchlist**: Short on time? Filter the catalog to show only the absolutely essential titles required to understand *Avengers: Doomsday*.
-- **Advanced Filtering**: Filter by Universe, Phase, Format (Movie/TV), and Status.
-- **Data Persistence**: Import and export your progress in JSON format, or keep it locally in your browser.
+Navigating decades of superhero releases across different studios can be overwhelming. This project provides a structured **112-title catalog** encompassing the Marvel Cinematic Universe, 20th Century Fox's X-Men, Sony's Spider-Verse, Netflix's Defenders saga, and legacy releases.
 
-## 📸 Preview
+<p align="center">
+  <img src="Assets/preview.png" alt="Doomsday Watchlist Preview" width="900" />
+</p>
 
-![Banner](Assets/preview.png)
+---
+
+## ✨ Features
+
+* **112-Title Master Catalog**: Complete coverage across MCU Phases 1–6, Fox, Sony, Netflix, and legacy Marvel films.
+* **Progress & Runtime Math**: Live tracking of watched vs. remaining titles, total time remaining, and completion percentage.
+* **Essential Watchlist Shortcut**: Toggle a curated list of essential titles required to follow the main storylines leading to *Avengers: Doomsday*.
+* **Disney Official Style Mode**: Quickly filter by official recommended watch orders.
+* **Advanced Filtering & Search**: Instant filtering by Universe, Phase, Format (Movie / TV Show), and Status (Watched / Pending).
+* **Data Import & Export**: Save progress automatically in `localStorage`, or export/import `.json` files to sync across devices.
+* **Dynamic TMDB Enrichment**: Automatically fetches official posters, runtimes, and metadata via The Movie Database API.
+* **Zero Build / Zero Dependencies**: Pure HTML, CSS, and Vanilla JS for instant performance.
+
+---
+
+## 📚 Catalog Scope
+
+The catalog covers **112 titles** across all major Marvel film and television branches:
+
+* **Marvel Cinematic Universe (MCU)**: Infinity Saga & Multiverse Saga (Phases 1 to 6).
+* **Netflix / Defenders Saga**: *Daredevil*, *The Punisher*, *Jessica Jones*, *Luke Cage*, *Iron Fist*, *The Defenders*.
+* **20th Century Fox**: *X-Men*, *Wolverine*, *Deadpool*, and *Fantastic Four* franchises.
+* **Sony Pictures**: *Spider-Man* (Raimi & Webb), animated *Spider-Verse*, and Sony's Spider-Man Universe (SSU).
+* **Legacy Productions**: *Blade* trilogy, *Ghost Rider*, and related classic properties.
+
+---
 
 ## 🛠️ Tech Stack
 
-- **HTML5** & **Vanilla CSS**: Clean, responsive, and modern aesthetic.
-- **Vanilla JavaScript**: Lightweight and fast execution for state management and progress calculations.
-- **TMDB API Data**: Title information and data sourced from The Movie Database.
+* **Frontend**: HTML5, CSS3, Vanilla JavaScript (ES6+)
+* **Data Source**: Local JSON dataset (`peliculas.json`) + [TMDB API](https://www.themoviedb.org/)
+* **State & Storage**: Web Browser `localStorage` & JSON Import/Export
 
-## 🚀 How to use
+---
 
-Simply open `index.html` in your favorite browser, or host the files on any static web server (like GitHub Pages or Vercel). No build process or dependencies required!
+## 📁 Project Structure
 
-## ⚖️ License & Disclaimer
+```text
+Doomsday-Watchlist/
+├── Assets/          # Image assets, logos, and previews
+├── index.html       # Primary HTML layout
+├── styles.css       # Visual styles and responsive design
+├── script.js        # Core logic, filtering, progress calculation, and API fetch
+├── peliculas.json   # Catalog dataset containing all 112 titles
+└── LICENSE          # MIT License terms
+```
 
-This project's code is licensed under the [MIT License](LICENSE).
+---
 
-**Disclaimer:** This is a fan-made, non-profit project. It is not affiliated with, endorsed by, or sponsored by Marvel Studios, The Walt Disney Company, Fox, or Sony. All character names, logos, and related properties are trademarks of Marvel and their respective owners.
+## 💻 Installation & Local Setup
 
-Data and images are provided by [The Movie Database (TMDB)](https://www.themoviedb.org/). This product uses the TMDB API but is not endorsed or certified by TMDB.
-## 🎬 About the project
+Since this is a static project, no build tools, compilation, or `npm install` commands are required.
 
-This website is a personal, fan-made watchlist and progress tracker created to help Marvel fans organize everything they need to watch before the release of *Avengers: Doomsday* in December 2026.
-
-The catalog includes a broad set of titles from the Marvel Cinematic Universe, 20th Century Fox properties, Sony's Spider-Verse and related universe, and Netflix/Defenders-era entries. The app is built to make the marathon easier to plan, track, and complete.
-
-<p align="center">
-  <img src="Assets/preview.png" alt="Doomsday Watchlist preview" width="900" />
-</p>
-
-It is designed for people who want to:
-
-- know exactly which movies and shows are part of the essential Marvel timeline,
-- track what they have already watched,
-- estimate how much time is left before they are fully prepared,
-- filter the list by status, format, universe, or phase,
-- keep a clean and practical watchlist without needing any backend or database.
-
-## 🧪 Local installation and editing
-
-This project is a static site, so there is no build step or dependency installation required.
-
-Clone the repository with Git:
+### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/DavidFerreiro-dev/Doomsday-Watchlist.git
 cd Doomsday-Watchlist
 ```
 
-1. Open the folder in VS Code or your editor of choice.
-2. Open `index.html` directly in a browser for a quick check, or run a simple local server for a better development experience.
-3. Edit `index.html`, `styles.css`, `script.js`, or `peliculas.json` as needed.
-4. Refresh the browser to see your changes.
+### Step 2: Launch in Browser
 
-If you want to run a quick local server, you can use something like `python3 -m http.server` from the project folder and open the shown local address in your browser.
+#### Option A: Direct File Open
 
-The project works well with static hosting such as GitHub Pages or Vercel.
+Open `index.html` directly in your favorite web browser.
 
-## ✨ Features
+> **Note:** Some browsers restrict local file fetching for JSON files.
 
-- 111-title Marvel catalog spanning the main storylines and connected universes
-- Countdown to *Avengers: Doomsday* release date
-- Total runtime and watched/remaining time tracking
-- Progress bar and percentage completion
-- Search by title
-- Filters by:
-  - watched / pending
-  - movie / TV show
-  - universe / phase
-- Essential watchlist shortcut for the most important titles
-- Disney official-style essential list toggle
-- Mark visible items as watched
-- Reset progress button
-- Export watch progress to JSON
-- Import watch progress from JSON
-- Local browser persistence with `localStorage`
-- Responsive and modern UI
-- Dynamic TMDB-powered title enrichment for posters, runtime, and metadata
+#### Option B: Local Web Server (Recommended)
 
-## 📚 Included universes and catalog scope
+To prevent potential CORS restriction issues when fetching `peliculas.json`, run a lightweight HTTP server in the project root.
 
-The tracker covers content from multiple Marvel-related branches, including:
+**Using Python 3:**
 
-- MCU timeline (Infinity Saga and Multiverse Saga)
-- MCU Phase 1 through Phase 6
-- Netflix / Defenders era
-- 20th Century Fox titles such as X-Men and Fantastic Four
-- New Line Cinema entries such as Blade
-- Sony Spider-Verse and Sony's Spider-Man Universe
-- Ghost Rider-related content
+```bash
+python3 -m http.server 8000
+```
 
-## 🚀 How to use it
+Then open http://localhost:8000 in your browser.
 
-1. Open `index.html` in your browser.
-2. Browse the catalog or use the search and filters.
-3. Click titles to mark them as watched or pending.
-4. Use the essential watchlist to focus only on the most important titles.
-5. Export your progress whenever you want to save it.
-6. Import it back later to continue where you left off.
+**Using Node.js (`http-server`):**
 
-You can also host the project on any static hosting service, such as GitHub Pages or Vercel, without needing a build pipeline.
-
-## 🛠️ Tech stack
-
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- The Movie Database (TMDB) API
-- Local browser storage for personal progress tracking
-
-## 📁 Project structure
-
-- `index.html` — main app structure
-- `styles.css` — visual design and responsive layout
-- `script.js` — catalog logic, filters, progress tracking, and TMDB integration
-- `peliculas.json` — catalog data
-- `Assets/` — images, icons, and visual assets
-- `LICENSE` — project license
-
-## 🖼️ Credits
-
-### Marvel and related rights holders
-
-This project is a fan-made tribute based on Marvel-related characters, films, series, logos, and trademarks. All original intellectual property belongs to Marvel Studios, The Walt Disney Company, 20th Century Studios, Sony Pictures, and their respective rights holders.
-
-### TMDB
-
-This project uses The Movie Database (TMDB) for metadata such as posters, runtimes, release information, and related title data. TMDB is not affiliated with this project and does not endorse it.
-
-## ⚖️ License
-
-This project is distributed under the MIT License. If you create a derivative project, you must keep the copyright and license notice from the original MIT license and include the disclaimer that comes with it.
-
-The MIT license allows you to reuse, modify, and redistribute the code, including in derivative projects, as long as the required notice is preserved. It does not grant rights to Marvel, Disney, Fox, Sony, or TMDB trademarks, logos, posters, or other third-party assets. If your derivative uses those brands or data, you are responsible for making sure you have the right to do so and for keeping the same non-affiliation disclaimers.
+```bash
+npx http-server .
+```
 
 ---
 
-<footer>
-  <p>
-    <strong>Doomsday Watchlist</strong><br>
-    Updated: October 2026<br>
-    Made by David Ferreiro
-  </p>
-  <p>
-    © 2026 David Ferreiro · Built for Marvel fans preparing for Avengers: Doomsday
-  </p>
-</footer>
+## 🖼️ Detailed Credits & Legal Disclaimer
+
+### 👨‍💻 Project Author
+
+* **Created and maintained by:** [David Ferreiro](https://github.com/DavidFerreiro-dev)
+* **Purpose:** An open-source, non-profit, fan-made organizational tool created strictly for personal tracking and educational purposes out of love for the Marvel universes.
+
+### 🦸‍♂️ Intellectual Property & Trademarks
+
+This project is **not** affiliated with, endorsed, sponsored, or specifically approved by any of the following rights holders. All characters, names, logos, artwork, titles, and related media are registered trademarks and copyrights of their respective owners:
+
+* **Marvel Studios & The Walt Disney Company:** Creators and owners of the Marvel Cinematic Universe (MCU), including *The Avengers*, *Iron Man*, *Captain America*, *Thor*, and all Marvel-branded Disney+ television properties.
+* **20th Century Studios (formerly 20th Century Fox):** Original producers and rights holders for the *X-Men*, *Wolverine*, *Deadpool*, and *Fantastic Four* film franchises prior to the Disney acquisition.
+* **Sony Pictures Entertainment:** Owners of the film rights and distributors for *Spider-Man* (including the Tobey Maguire and Andrew Garfield films), the animated *Spider-Verse* franchise, and Sony's Spider-Man Universe (SSU) titles such as *Venom* and *Morbius*.
+* **New Line Cinema (Warner Bros. Discovery):** Original production studio and distributors of the *Blade* trilogy.
+* **Netflix:** Original distributors of the Marvel Defenders television saga.
+
+### 🎬 Data & Metadata Provider (TMDB)
+
+All movie and television metadata displayed in this application—including official promotional posters, release dates, and runtimes—is retrieved dynamically using the **[The Movie Database (TMDB) API](https://www.themoviedb.org/)**.
+
+* This product uses the TMDB API but is not endorsed or certified by TMDB.
+* TMDB is a community-built movie and TV database. We highly encourage supporting their platform if you enjoy the enriched data provided in this tracker.
+
+### ⚖️ Fair Use Disclaimer
+
+This application is strictly for personal, non-commercial use. The use of low-resolution poster images and promotional titles within this application qualifies as fair use under United States copyright law for the purposes of commentary, identification, and information tracking.
+
+---
+
+## 📄 License
+
+This project is released under the **[MIT License](LICENSE)**.
+
+You are free to use, copy, modify, merge, publish, and distribute this codebase, provided that the original copyright notice and permission notice are included in all copies or substantial portions of the Software.
+
+> **Note:** The MIT License applies exclusively to the code and logic written for this application. It does not grant any rights or licenses to the third-party intellectual property, trademarks, or TMDB data mentioned above.

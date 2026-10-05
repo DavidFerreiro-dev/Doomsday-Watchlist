@@ -1,5 +1,7 @@
 <div align="center">
   <img src="Assets/logoDoom.png" alt="Avengers: Doomsday logo" width="300" />
+  <br>
+  <img src="Assets/preview.png" alt="Doomsday Watchlist preview" width="900" />
 
   # Which Movies Am I Missing Before Avengers: Doomsday?
 
@@ -24,7 +26,7 @@ It is designed for people who want to:
 
 ## ✨ Features
 
-- 88-title Marvel catalog spanning the main storylines and connected universes
+- 111-title Marvel catalog spanning the main storylines and connected universes
 - Countdown to *Avengers: Doomsday* release date
 - Total runtime and watched/remaining time tracking
 - Progress bar and percentage completion

@@ -1,8 +1,6 @@
 <div align="center">
   <img src="Assets/logoDoom.png" alt="Avengers: Doomsday logo" width="300" />
   <br>
-  <img src="Assets/preview.png" alt="Doomsday Watchlist preview" width="900" />
-
   # Which Movies Am I Missing Before Avengers: Doomsday?
 
   <p>
@@ -15,6 +13,10 @@
 This website is a personal, fan-made watchlist and progress tracker created to help Marvel fans organize everything they need to watch before the release of *Avengers: Doomsday* in December 2026.
 
 The catalog includes a broad set of titles from the Marvel Cinematic Universe, 20th Century Fox properties, Sony's Spider-Verse and related universe, and Netflix/Defenders-era entries. The app is built to make the marathon easier to plan, track, and complete.
+
+<p align="center">
+  <img src="Assets/preview.png" alt="Doomsday Watchlist preview" width="900" />
+</p>
 
 It is designed for people who want to:
 

@@ -37,6 +37,7 @@ const UNIVERSE_META = {
   universal: { label: 'Universal', badgeClass: 'cat-badge-universal' },
   'fantastic four': { label: 'Fantastic Four (Fox)', badgeClass: 'cat-badge-fantastic-four' },
   'new line cinema': { label: 'New Line Cinema', badgeClass: 'cat-badge-newline' },
+  'pre-ucm': { label: 'PRE-UCM', badgeClass: '' },
 };
 
 function getCategoryKey(item) {
@@ -175,15 +176,19 @@ function saveWatched() {
 }
 
 function getCatalogStats(catalog) {
-  const totalItems = catalog.length;
   const totalMovies = catalog.filter(item => item.type === 'movie').length;
-  const totalTvShows = catalog.filter(item => item.type === 'tv').length;
-  const totalItemsReleased = catalog.filter(item => {
-    const releaseDate = getItemReleaseDate(item);
-    return !!releaseDate && releaseDate.getTime() <= Date.now();
-  }).length;
+  const tvSeriesIds = new Set(
+    catalog
+      .filter(item => item.type === 'tv')
+      .map(item => item.tmdbId || item.uid.replace(/-s\d+$/, ''))
+  );
+  const totalTvShows = tvSeriesIds.size;
 
-  return { totalItems, totalItemsReleased, totalMovies, totalTvShows };
+  return {
+    totalItems: totalMovies + totalTvShows,
+    totalMovies,
+    totalTvShows,
+  };
 }
 
 function updateCatalogStatsDisplay() {
@@ -191,7 +196,7 @@ function updateCatalogStatsDisplay() {
   if (!totalCountEl) return;
 
   const stats = getCatalogStats(CATALOG);
-  totalCountEl.textContent = stats.totalItemsReleased;
+  totalCountEl.textContent = `${stats.totalMovies} movies and ${stats.totalTvShows} TV shows`;
 }
 
 function resolvePosterSrc(poster) {

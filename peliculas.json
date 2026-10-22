@@ -913,152 +913,152 @@
       "tmdbId": 106355,
       "title": "Captain America (1944)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-spider-man-1977",
       "tmdbId": 225914,
       "title": "Spider-Man (1977)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-dr-strange-1978",
       "tmdbId": 50468,
       "title": "Dr. Strange (1978)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-captain-america-1979",
       "tmdbId": 197467,
       "title": "Captain America (1979)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-captain-america-ii-1979",
       "tmdbId": 197481,
       "title": "Captain America II: Death Too Soon (1979)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-10658-pre",
       "tmdbId": 10658,
       "title": "Howard the Duck (1986)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-hulk-returns-1988",
       "tmdbId": 26881,
       "title": "The Incredible Hulk Returns (1988)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-trial-hulk-1989",
       "tmdbId": 26883,
       "title": "The Trial of the Incredible Hulk (1989)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-punisher-1989",
       "tmdbId": 8867,
       "title": "The Punisher (1989)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
-    },
-    {
-      "uid": "m-captain-america-1990",
-      "tmdbId": 13995,
-      "title": "Captain America (1990)",
-      "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-death-hulk-1990",
       "tmdbId": 19593,
       "title": "The Death of the Incredible Hulk (1990)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
+    },
+    {
+      "uid": "m-captain-america-1990",
+      "tmdbId": 13995,
+      "title": "Captain America (1990)",
+      "type": "movie",
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-22059-pre",
       "tmdbId": 22059,
       "title": "The Fantastic Four (1994)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-generation-x-1996",
       "tmdbId": 26623,
       "title": "Generation X (1996)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-nick-fury-1998",
       "tmdbId": 27460,
       "title": "Nick Fury: Agent of S.H.I.E.L.D. (1998)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-daredevil-2003",
       "tmdbId": 9480,
       "title": "Daredevil (2003)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-punisher-2004",
       "tmdbId": 7220,
       "title": "The Punisher (2004)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-elektra-2005",
       "tmdbId": 9947,
       "title": "Elektra (2005)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-man-thing-2005",
       "tmdbId": 18937,
       "title": "Man-Thing (2005)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     },
     {
       "uid": "m-punisher-war-zone",
       "tmdbId": 13056,
       "title": "Punisher: War Zone (2008)",
       "type": "movie",
-      "universe": "PRE-UCM",
-      "category": "PRE-UCM"
+      "universe": "PRE-MCU",
+      "category": "PRE-MCU"
     }
   ]
 }

@@ -1284,6 +1284,7 @@ body.search-mode .clear-btn { right: 4.9rem; }
 .cat-badge-sony   { background: var(--purple-alpha); color: var(--purple); border: 1px solid rgba(155,89,182,0.25); }
 .cat-badge-fantastic-four { background: rgba(9,132,227,0.15); color: #0984e3; border: 1px solid rgba(9,132,227,0.25); }
 .cat-badge-universal { background: rgba(243,156,18,0.15); color: #f39c12; border: 1px solid rgba(243,156,18,0.25); }
+.cat-badge-pre-mcu   { background: rgba(108,92,231,0.15); color: #a29bfe; border: 1px solid rgba(108,92,231,0.35); }
 
 .badge-type            { color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.1); }
 .badge-special         { color: var(--gold); border: 1px solid rgba(212,175,55,0.45); }

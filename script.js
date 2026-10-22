@@ -37,7 +37,7 @@ const UNIVERSE_META = {
   universal: { label: 'Universal', badgeClass: 'cat-badge-universal' },
   'fantastic four': { label: 'Fantastic Four (Fox)', badgeClass: 'cat-badge-fantastic-four' },
   'new line cinema': { label: 'New Line Cinema', badgeClass: 'cat-badge-newline' },
-  'pre-ucm': { label: 'PRE-UCM', badgeClass: '' },
+  'pre-mcu': { label: 'PRE-MCU', badgeClass: 'cat-badge-pre-mcu' },
 };
 
 function getCategoryKey(item) {

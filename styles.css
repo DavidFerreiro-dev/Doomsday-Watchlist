@@ -1111,9 +1111,13 @@ body.search-mode .clear-btn { right: 4.9rem; }
   border-radius: var(--r-pill);
 }
 
-.cat-badge-mcu    { background: var(--red-alpha);    color: var(--red);    border: 1px solid rgba(230,57,70,0.25); }
+.cat-badge-mcu    { background: rgba(139,26,26,0.18);  color: #c0392b;       border: 1px solid rgba(139,26,26,0.4); }
 .cat-badge-xmen   { background: var(--blue-alpha);   color: var(--blue);   border: 1px solid rgba(74,144,217,0.25); }
 .cat-badge-sony   { background: var(--purple-alpha); color: var(--purple); border: 1px solid rgba(155,89,182,0.25); }
+.cat-badge-fantastic-four { background: rgba(9,132,227,0.15);   color: #0984e3; border: 1px solid rgba(9,132,227,0.25); }
+.cat-badge-universal      { background: rgba(243,156,18,0.15);  color: #f39c12; border: 1px solid rgba(243,156,18,0.25); }
+.cat-badge-pre-mcu        { background: rgba(108,92,231,0.15);  color: #a29bfe; border: 1px solid rgba(108,92,231,0.35); }
+.cat-badge-newline        { background: rgba(189,195,199,0.15); color: #bdc3c7; border: 1px solid rgba(189,195,199,0.3); }
 
 .cat-header-line {
   flex: 1;
@@ -1281,10 +1285,7 @@ body.search-mode .clear-btn { right: 4.9rem; }
 .badge-universe.fantastic-four { color: #0984e3; border: 1px solid rgba(9,132,227,0.45); }
 .badge-universe.universal { color: #f39c12; border: 1px solid rgba(243,156,18,0.45); }
 
-.cat-badge-sony   { background: var(--purple-alpha); color: var(--purple); border: 1px solid rgba(155,89,182,0.25); }
-.cat-badge-fantastic-four { background: rgba(9,132,227,0.15); color: #0984e3; border: 1px solid rgba(9,132,227,0.25); }
-.cat-badge-universal { background: rgba(243,156,18,0.15); color: #f39c12; border: 1px solid rgba(243,156,18,0.25); }
-.cat-badge-pre-mcu   { background: rgba(108,92,231,0.15); color: #a29bfe; border: 1px solid rgba(108,92,231,0.35); }
+/* cat-badge variants consolidated at §9 above */
 
 .badge-type            { color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.1); }
 .badge-special         { color: var(--gold); border: 1px solid rgba(212,175,55,0.45); }
@@ -1825,11 +1826,7 @@ body.search-mode .clear-btn { right: 4.9rem; }
   background: rgba(212,175,55,0.9);
 }
 
-.cat-badge-newline {
-  background: rgba(189,195,199,0.15);
-  color: #bdc3c7;
-  border: 1px solid rgba(189,195,199,0.3);
-}
+/* .cat-badge-newline consolidated at §9 above */
 
 /* ── 16. PRINT / PDF TARGET ─────────────────────────────── */
 @media print {

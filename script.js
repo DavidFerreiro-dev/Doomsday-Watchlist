@@ -483,6 +483,7 @@ function getFilteredItems() {
         if (universe === 'sony-spiderverse' && item.category !== 'Sony · Raimi Trilogy' && item.category !== 'Sony · The Amazing Spider-Man' && item.category !== 'Sony · Animated Spider-Verse') return false;
         if (universe === 'sony-ssu' && item.category !== 'Sony SSU') return false;
         if (universe === 'sony-ghostrider' && item.category !== 'Sony · Ghost Rider') return false;
+        if (universe === 'sony-primevideo' && item.category !== 'Prime Video') return false;
       } else {
         if (uni !== universe) return false;
       }
@@ -701,28 +702,26 @@ function renderGrid(items) {
   } else {
     const groups = groupItems(items);
     for (const [catName, grpItems] of groups) {
-      if (groups.size > 1) {
-        const first = grpItems[0];
-        const uni = (first.universe || '').toLowerCase().replace('-men', 'men');
-        const meta = UNIVERSE_META[uni] || {};
+      const first = grpItems[0];
+      const uni = (first.universe || '').toLowerCase().replace('-men', 'men');
+      const meta = UNIVERSE_META[uni] || {};
 
-        let displayCat = catName;
-        if (uni === 'mcu') {
-          const parts = catName.split(' · ');
-          if (parts.length >= 3) {
-            displayCat = `${parts[0]} · ${parts[1]} <small style="opacity:.55">${parts[2]}</small>`;
-          }
+      let displayCat = catName;
+      if (uni === 'mcu') {
+        const parts = catName.split(' · ');
+        if (parts.length >= 3) {
+          displayCat = `${parts[0]} · ${parts[1]} <small style="opacity:.55">${parts[2]}</small>`;
         }
-
-        html += `<div class="cat-header">
-        <div class="cat-header-text">
-          <span class="cat-badge ${meta.badgeClass || ''}">${meta.label || first.universe}</span>
-          <h2>${displayCat}</h2>
-        </div>
-        <div class="cat-header-line"></div>
-        <span class="cat-count">${grpItems.length} title${grpItems.length !== 1 ? 's' : ''}</span>
-      </div>`;
       }
+
+      html += `<div class="cat-header">
+      <div class="cat-header-text">
+        <span class="cat-badge ${meta.badgeClass || ''}">${meta.label || first.universe}</span>
+        <h2>${displayCat}</h2>
+      </div>
+      <div class="cat-header-line"></div>
+      <span class="cat-count">${grpItems.length} title${grpItems.length !== 1 ? 's' : ''}</span>
+    </div>`;
       html += grpItems.map(buildCardHTML).join('');
     }
   }

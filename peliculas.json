@@ -1,7 +1,7 @@
-{
-  "generated": "2026-10-23",
-  "fuente": "The Movie Database (TMDB) — https://www.themoviedb.org",
-  "nota": "Incluye entradas con ID TMDB confirmado y obras históricas pendientes con tmdbId=null; comprobar antes de importar.",
+﻿{
+  "generated": "2026-10-26",
+  "fuente": "The Movie Database (TMDB) — https://www.themoviedb.org; complementado con listados públicos de producciones Marvel oficiales.",
+  "nota": "IDs TMDB completados cuando se encontró una ficha identificable. 21 entradas continúan con tmdbId=null porque no se localizó una ficha fiable/independiente o existe ambigüedad. Revisar la nota de Deadpool and Korg React, que presenta IDs duplicados en fuentes secundarias.",
   "catalog": [
     {
       "uid": "m-1726",
@@ -614,6 +614,102 @@
       "category": "MCU · Phase 7"
     },
     {
+      "uid": "m-76122",
+      "tmdbId": 76122,
+      "title": "Marvel One-Shot: The Consultant (2011)",
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Shorts & One-Shots"
+    },
+    {
+      "uid": "m-76535",
+      "tmdbId": 76535,
+      "title": "Marvel One-Shot: A Funny Thing Happened on the Way to Thor's Hammer (2011)",
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Shorts & One-Shots"
+    },
+    {
+      "uid": "m-119569",
+      "tmdbId": 119569,
+      "title": "Marvel One-Shot: Item 47 (2012)",
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Shorts & One-Shots"
+    },
+    {
+      "uid": "m-211387",
+      "tmdbId": 211387,
+      "title": "Marvel One-Shot: Agent Carter (2013)",
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Shorts & One-Shots"
+    },
+    {
+      "uid": "m-253980",
+      "tmdbId": 253980,
+      "title": "Marvel One-Shot: All Hail the King (2014)",
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Shorts & One-Shots"
+    },
+    {
+      "uid": "m-team-thor-2016",
+      "tmdbId": 413279,
+      "title": "Team Thor (2016 short)",
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Shorts & One-Shots"
+    },
+    {
+      "uid": "m-team-thor-part-2-2017",
+      "tmdbId": 441829,
+      "title": "Team Thor: Part 2 (2017 short)",
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Shorts & One-Shots"
+    },
+    {
+      "uid": "m-guardians-inferno-short",
+      "tmdbId": 1457045,
+      "title": "Guardians' Inferno (2017 music-video short)",
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Shorts & One-Shots"
+    },
+    {
+      "uid": "m-team-darryl-2018",
+      "tmdbId": 505945,
+      "title": "Team Darryl (2018 short)",
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Shorts & One-Shots"
+    },
+    {
+      "uid": "m-peters-to-do-list-2018",
+      "tmdbId": 758025,
+      "title": "Peter's To-Do List (2018 short)",
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Shorts & One-Shots"
+    },
+    {
+      "uid": "m-deadpool-korg-react",
+      "tmdbId": 1752151,
+      "title": "Deadpool and Korg React (2021 promotional short)",
+      "type": "movie",
+      "universe": "MCU",
+      "category": "MCU · Shorts & One-Shots"
+    },
+    {
+      "uid": "tv-whih-newsfront",
+      "tmdbId": 69069,
+      "title": "WHIH Newsfront (short-form series, 2015–2016)",
+      "type": "tv",
+      "universe": "MCU",
+      "category": "MCU · Shorts & One-Shots"
+    },
+    {
       "uid": "m-36657",
       "tmdbId": 36657,
       "title": "X-Men",
@@ -716,6 +812,22 @@
       "type": "movie",
       "universe": "X-Men",
       "category": "X-Men (Fox) · Deadpool"
+    },
+    {
+      "uid": "m-567604",
+      "tmdbId": 567604,
+      "title": "Once Upon a Deadpool (2018)",
+      "type": "movie",
+      "universe": "X-Men",
+      "category": "X-Men · Deadpool"
+    },
+    {
+      "uid": "m-deadpool-no-good-deed",
+      "tmdbId": 558144,
+      "title": "Deadpool: No Good Deed (2017 short)",
+      "type": "movie",
+      "universe": "X-Men",
+      "category": "X-Men · Deadpool"
     },
     {
       "uid": "m-9738",
@@ -902,6 +1014,22 @@
       "category": "Sony · Animated Spider-Verse"
     },
     {
+      "uid": "m-spider-ham-caught-in-a-ham",
+      "tmdbId": 583055,
+      "title": "Spider-Ham: Caught in a Ham (2019)",
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Verse"
+    },
+    {
+      "uid": "m-1106299",
+      "tmdbId": 1106299,
+      "title": "The Spider Within: A Spider-Verse Story (2023)",
+      "type": "movie",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Verse"
+    },
+    {
       "uid": "tv-220102",
       "tmdbId": 220102,
       "title": "Spider-Noir",
@@ -910,700 +1038,1068 @@
       "category": "Prime Video"
     },
     {
-      "uid": "m-captain-america-1944",
-      "tmdbId": 106355,
-      "title": "Captain America (1944)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-spider-man-1977",
-      "tmdbId": 225914,
-      "title": "Spider-Man (1977)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-dr-strange-1978",
-      "tmdbId": 50468,
-      "title": "Dr. Strange (1978)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-captain-america-1979",
-      "tmdbId": 197467,
-      "title": "Captain America (1979)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-captain-america-ii-1979",
-      "tmdbId": 197481,
-      "title": "Captain America II: Death Too Soon (1979)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-10658-pre",
-      "tmdbId": 10658,
-      "title": "Howard the Duck (1986)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-hulk-returns-1988",
-      "tmdbId": 26881,
-      "title": "The Incredible Hulk Returns (1988)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-trial-hulk-1989",
-      "tmdbId": 26883,
-      "title": "The Trial of the Incredible Hulk (1989)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-punisher-1989",
-      "tmdbId": 8867,
-      "title": "The Punisher (1989)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-death-hulk-1990",
-      "tmdbId": 19593,
-      "title": "The Death of the Incredible Hulk (1990)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-captain-america-1990",
-      "tmdbId": 13995,
-      "title": "Captain America (1990)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-22059-pre",
-      "tmdbId": 22059,
-      "title": "The Fantastic Four (1994)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-generation-x-1996",
-      "tmdbId": 26623,
-      "title": "Generation X (1996)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-nick-fury-1998",
-      "tmdbId": 27460,
-      "title": "Nick Fury: Agent of S.H.I.E.L.D. (1998)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-daredevil-2003",
-      "tmdbId": 9480,
-      "title": "Daredevil (2003)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-punisher-2004",
-      "tmdbId": 7220,
-      "title": "The Punisher (2004)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-elektra-2005",
-      "tmdbId": 9947,
-      "title": "Elektra (2005)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-man-thing-2005",
-      "tmdbId": 18882,
-      "title": "Man-Thing (2005)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-punisher-war-zone",
-      "tmdbId": 13056,
-      "title": "Punisher: War Zone (2008)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-2164-s1",
-      "tmdbId": 2164,
-      "title": "The Marvel Super Heroes (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-1651-s1",
-      "tmdbId": 1651,
-      "title": "Fantastic Four (1967) (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
       "uid": "tv-1482-s1",
       "tmdbId": 1482,
       "title": "Spider-Man (1967) (Season 1)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
     },
     {
       "uid": "tv-1482-s2",
       "tmdbId": 1482,
       "title": "Spider-Man (1967) (Season 2)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
     },
     {
       "uid": "tv-1482-s3",
       "tmdbId": 1482,
       "title": "Spider-Man (1967) (Season 3)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-65294",
-      "tmdbId": 65294,
-      "title": "The Incredible Hulk (1977) (Pilot TV Movie)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-4552-s1",
-      "tmdbId": 4552,
-      "title": "The Amazing Spider-Man (1977) (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-648-s1",
-      "tmdbId": 648,
-      "title": "The Incredible Hulk (1977) (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-225925",
-      "tmdbId": 225925,
-      "title": "Spider-Man Strikes Back (1978)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-438561",
-      "tmdbId": 438561,
-      "title": "Spider-Man (Toei) (1978) (Episode 0)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-4552-s2",
-      "tmdbId": 4552,
-      "title": "The Amazing Spider-Man (1977) (Season 2)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-648-s2",
-      "tmdbId": 648,
-      "title": "The Incredible Hulk (1977) (Season 2)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-2373-s1",
-      "tmdbId": 2373,
-      "title": "The New Fantastic Four (1978) (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-648-s3",
-      "tmdbId": 648,
-      "title": "The Incredible Hulk (1977) (Season 3)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-4784-s1",
-      "tmdbId": 4784,
-      "title": "Spider-Woman (1979) (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-648-s4",
-      "tmdbId": 648,
-      "title": "The Incredible Hulk (1977) (Season 4)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-225938",
-      "tmdbId": 225938,
-      "title": "Spider-Man: The Dragon's Challenge (1981)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-648-s5",
-      "tmdbId": 648,
-      "title": "The Incredible Hulk (1977) (Season 5)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
     },
     {
       "uid": "tv-3973-s1",
       "tmdbId": 3973,
       "title": "Spider-Man (1981) (Season 1)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
     },
     {
       "uid": "tv-1269-s1",
       "tmdbId": 1269,
       "title": "Spider-Man and His Amazing Friends (Season 1)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
     },
     {
       "uid": "tv-1269-s2",
       "tmdbId": 1269,
       "title": "Spider-Man and His Amazing Friends (Season 2)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
     },
     {
       "uid": "tv-1269-s3",
       "tmdbId": 1269,
       "title": "Spider-Man and His Amazing Friends (Season 3)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-4574-s1",
-      "tmdbId": 4574,
-      "title": "X-Men: The Animated Series (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-4574-s2",
-      "tmdbId": 4574,
-      "title": "X-Men: The Animated Series (Season 2)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-2901-s1",
-      "tmdbId": 2901,
-      "title": "Fantastic Four (1994) (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-3097-s1",
-      "tmdbId": 3097,
-      "title": "Iron Man (1994) (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
     },
     {
       "uid": "tv-888-s1",
       "tmdbId": 888,
       "title": "Spider-Man: The Animated Series (1994) (Season 1)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-4574-s3",
-      "tmdbId": 4574,
-      "title": "X-Men: The Animated Series (Season 3)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-2901-s2",
-      "tmdbId": 2901,
-      "title": "Fantastic Four (1994) (Season 2)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-3097-s2",
-      "tmdbId": 3097,
-      "title": "Iron Man (1994) (Season 2)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
     },
     {
       "uid": "tv-888-s2",
       "tmdbId": 888,
       "title": "Spider-Man: The Animated Series (1994) (Season 2)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-4574-s4",
-      "tmdbId": 4574,
-      "title": "X-Men: The Animated Series (Season 4)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-6332-s1",
-      "tmdbId": 6332,
-      "title": "The Incredible Hulk (1996) (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
     },
     {
       "uid": "tv-888-s3",
       "tmdbId": 888,
       "title": "Spider-Man: The Animated Series (1994) (Season 3)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-4574-s5",
-      "tmdbId": 4574,
-      "title": "X-Men: The Animated Series (Season 5)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-6332-s2",
-      "tmdbId": 6332,
-      "title": "The Incredible Hulk (1996) (Season 2)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
     },
     {
       "uid": "tv-888-s4",
       "tmdbId": 888,
       "title": "Spider-Man: The Animated Series (1994) (Season 4)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-1130-s1",
-      "tmdbId": 1130,
-      "title": "Silver Surfer (1998) (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
     },
     {
       "uid": "tv-888-s5",
       "tmdbId": 888,
       "title": "Spider-Man: The Animated Series (1994) (Season 5)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-1300-s1",
-      "tmdbId": 1300,
-      "title": "The Avengers: United They Stand (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
     },
     {
       "uid": "tv-10079-s1",
       "tmdbId": 10079,
       "title": "Spider-Man Unlimited (1999) (Season 1)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-668-s1",
-      "tmdbId": 668,
-      "title": "X-Men: Evolution (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-1449-s1",
-      "tmdbId": 1449,
-      "title": "Mutant X (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-668-s2",
-      "tmdbId": 668,
-      "title": "X-Men: Evolution (Season 2)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-1449-s2",
-      "tmdbId": 1449,
-      "title": "Mutant X (Season 2)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-668-s3",
-      "tmdbId": 668,
-      "title": "X-Men: Evolution (Season 3)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-1449-s3",
-      "tmdbId": 1449,
-      "title": "Mutant X (Season 3)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
     },
     {
       "uid": "tv-1664-s1",
       "tmdbId": 1664,
       "title": "Spider-Man: The New Animated Series (Season 1)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-668-s4",
-      "tmdbId": 668,
-      "title": "X-Men: Evolution (Season 4)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-14611",
-      "tmdbId": 14611,
-      "title": "Ultimate Avengers 2: Rise of the Panther (2006)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-14609",
-      "tmdbId": 14609,
-      "title": "Ultimate Avengers: The Movie (2006)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-4619-s1",
-      "tmdbId": 4619,
-      "title": "Blade: The Series (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "tv-132-s1",
-      "tmdbId": 132,
-      "title": "Fantastic Four: World’s Greatest Heroes (Season 1)",
-      "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-14830",
-      "tmdbId": 14830,
-      "title": "Doctor Strange: The Sorcerer Supreme (2007)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-13647",
-      "tmdbId": 13647,
-      "title": "The Invincible Iron Man (2007)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
-    },
-    {
-      "uid": "m-14613",
-      "tmdbId": 14613,
-      "title": "Next Avengers: Heroes of Tomorrow (2008)",
-      "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
     },
     {
       "uid": "tv-3854-s1",
       "tmdbId": 3854,
       "title": "The Spectacular Spider-Man (Season 1)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
     },
     {
       "uid": "tv-3854-s2",
       "tmdbId": 3854,
       "title": "The Spectacular Spider-Man (Season 2)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
+    },
+    {
+      "uid": "tv-34391-s1",
+      "tmdbId": 34391,
+      "title": "Ultimate Spider-Man (2012) (Season 1)",
+      "type": "tv",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
+    },
+    {
+      "uid": "tv-34391-s2",
+      "tmdbId": 34391,
+      "title": "Ultimate Spider-Man (2012) (Season 2)",
+      "type": "tv",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
+    },
+    {
+      "uid": "tv-34391-s3",
+      "tmdbId": 34391,
+      "title": "Ultimate Spider-Man (2012) (Season 3)",
+      "type": "tv",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
+    },
+    {
+      "uid": "tv-34391-s4",
+      "tmdbId": 34391,
+      "title": "Ultimate Spider-Man (2012) (Season 4)",
+      "type": "tv",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
+    },
+    {
+      "uid": "tv-72705-s1",
+      "tmdbId": 72705,
+      "title": "Marvel's Spider-Man (2017) (Season 1)",
+      "type": "tv",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
+    },
+    {
+      "uid": "tv-72705-s2",
+      "tmdbId": 72705,
+      "title": "Marvel's Spider-Man (2017) (Season 2)",
+      "type": "tv",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
+    },
+    {
+      "uid": "tv-72705-s3",
+      "tmdbId": 72705,
+      "title": "Marvel's Spider-Man (2017) (Season 3)",
+      "type": "tv",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
+    },
+    {
+      "uid": "tv-127635-s1",
+      "tmdbId": 127635,
+      "title": "Spidey and His Amazing Friends (2021) (Season 1)",
+      "type": "tv",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
+    },
+    {
+      "uid": "tv-127635-s2",
+      "tmdbId": 127635,
+      "title": "Spidey and His Amazing Friends (2021) (Season 2)",
+      "type": "tv",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
+    },
+    {
+      "uid": "tv-127635-s3",
+      "tmdbId": 127635,
+      "title": "Spidey and His Amazing Friends (2021) (Season 3)",
+      "type": "tv",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
+    },
+    {
+      "uid": "tv-127635-s4",
+      "tmdbId": 127635,
+      "title": "Spidey and His Amazing Friends (2021) (Season 4)",
+      "type": "tv",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
+    },
+    {
+      "uid": "tv-127635-s5",
+      "tmdbId": 127635,
+      "title": "Spidey and His Amazing Friends (2021) (Season 5)",
+      "type": "tv",
+      "universe": "Sony",
+      "category": "Sony · Animated Spider-Man TV Shows"
+    },
+    {
+      "uid": "m-captain-america-1944",
+      "tmdbId": 106355,
+      "title": "Captain America (1944)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-spider-man-1977",
+      "tmdbId": 225914,
+      "title": "Spider-Man (1977)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-dr-strange-1978",
+      "tmdbId": 50468,
+      "title": "Dr. Strange (1978)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-captain-america-1979",
+      "tmdbId": 197467,
+      "title": "Captain America (1979)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-captain-america-ii-1979",
+      "tmdbId": 197481,
+      "title": "Captain America II: Death Too Soon (1979)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-10658-pre",
+      "tmdbId": 10658,
+      "title": "Howard the Duck (1986)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-hulk-returns-1988",
+      "tmdbId": 26881,
+      "title": "The Incredible Hulk Returns (1988)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-trial-hulk-1989",
+      "tmdbId": 26883,
+      "title": "The Trial of the Incredible Hulk (1989)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-punisher-1989",
+      "tmdbId": 8867,
+      "title": "The Punisher (1989)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-death-hulk-1990",
+      "tmdbId": 19593,
+      "title": "The Death of the Incredible Hulk (1990)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-captain-america-1990",
+      "tmdbId": 13995,
+      "title": "Captain America (1990)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-22059-pre",
+      "tmdbId": 22059,
+      "title": "The Fantastic Four (1994)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-generation-x-1996",
+      "tmdbId": 26623,
+      "title": "Generation X (1996)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-nick-fury-1998",
+      "tmdbId": 27460,
+      "title": "Nick Fury: Agent of S.H.I.E.L.D. (1998)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-daredevil-2003",
+      "tmdbId": 9480,
+      "title": "Daredevil (2003)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-punisher-2004",
+      "tmdbId": 7220,
+      "title": "The Punisher (2004)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-elektra-2005",
+      "tmdbId": 9947,
+      "title": "Elektra (2005)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-man-thing-2005",
+      "tmdbId": 18882,
+      "title": "Man-Thing (2005)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-punisher-war-zone",
+      "tmdbId": 13056,
+      "title": "Punisher: War Zone (2008)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-2164-s1",
+      "tmdbId": 2164,
+      "title": "The Marvel Super Heroes (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-1651-s1",
+      "tmdbId": 1651,
+      "title": "Fantastic Four (1967) (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-65294",
+      "tmdbId": 65294,
+      "title": "The Incredible Hulk (1977) (Pilot TV Movie)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-4552-s1",
+      "tmdbId": 4552,
+      "title": "The Amazing Spider-Man (1977) (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-648-s1",
+      "tmdbId": 648,
+      "title": "The Incredible Hulk (1977) (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-225925",
+      "tmdbId": 225925,
+      "title": "Spider-Man Strikes Back (1978)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-438561",
+      "tmdbId": 438561,
+      "title": "Spider-Man (Toei) (1978) (Episode 0)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-4552-s2",
+      "tmdbId": 4552,
+      "title": "The Amazing Spider-Man (1977) (Season 2)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-648-s2",
+      "tmdbId": 648,
+      "title": "The Incredible Hulk (1977) (Season 2)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-2373-s1",
+      "tmdbId": 2373,
+      "title": "The New Fantastic Four (1978) (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-648-s3",
+      "tmdbId": 648,
+      "title": "The Incredible Hulk (1977) (Season 3)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-4784-s1",
+      "tmdbId": 4784,
+      "title": "Spider-Woman (1979) (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-648-s4",
+      "tmdbId": 648,
+      "title": "The Incredible Hulk (1977) (Season 4)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-225938",
+      "tmdbId": 225938,
+      "title": "Spider-Man: The Dragon's Challenge (1981)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-648-s5",
+      "tmdbId": 648,
+      "title": "The Incredible Hulk (1977) (Season 5)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-4574-s1",
+      "tmdbId": 4574,
+      "title": "X-Men: The Animated Series (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-4574-s2",
+      "tmdbId": 4574,
+      "title": "X-Men: The Animated Series (Season 2)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-2901-s1",
+      "tmdbId": 2901,
+      "title": "Fantastic Four (1994) (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-3097-s1",
+      "tmdbId": 3097,
+      "title": "Iron Man (1994) (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-4574-s3",
+      "tmdbId": 4574,
+      "title": "X-Men: The Animated Series (Season 3)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-2901-s2",
+      "tmdbId": 2901,
+      "title": "Fantastic Four (1994) (Season 2)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-3097-s2",
+      "tmdbId": 3097,
+      "title": "Iron Man (1994) (Season 2)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-4574-s4",
+      "tmdbId": 4574,
+      "title": "X-Men: The Animated Series (Season 4)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-6332-s1",
+      "tmdbId": 6332,
+      "title": "The Incredible Hulk (1996) (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-4574-s5",
+      "tmdbId": 4574,
+      "title": "X-Men: The Animated Series (Season 5)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-6332-s2",
+      "tmdbId": 6332,
+      "title": "The Incredible Hulk (1996) (Season 2)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-1130-s1",
+      "tmdbId": 1130,
+      "title": "Silver Surfer (1998) (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-1300-s1",
+      "tmdbId": 1300,
+      "title": "The Avengers: United They Stand (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-668-s1",
+      "tmdbId": 668,
+      "title": "X-Men: Evolution (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-1449-s1",
+      "tmdbId": 1449,
+      "title": "Mutant X (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-668-s2",
+      "tmdbId": 668,
+      "title": "X-Men: Evolution (Season 2)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-1449-s2",
+      "tmdbId": 1449,
+      "title": "Mutant X (Season 2)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-668-s3",
+      "tmdbId": 668,
+      "title": "X-Men: Evolution (Season 3)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-1449-s3",
+      "tmdbId": 1449,
+      "title": "Mutant X (Season 3)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-668-s4",
+      "tmdbId": 668,
+      "title": "X-Men: Evolution (Season 4)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-14611",
+      "tmdbId": 14611,
+      "title": "Ultimate Avengers 2: Rise of the Panther (2006)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-14609",
+      "tmdbId": 14609,
+      "title": "Ultimate Avengers: The Movie (2006)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-4619-s1",
+      "tmdbId": 4619,
+      "title": "Blade: The Series (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-132-s1",
+      "tmdbId": 132,
+      "title": "Fantastic Four: World’s Greatest Heroes (Season 1)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-14830",
+      "tmdbId": 14830,
+      "title": "Doctor Strange: The Sorcerer Supreme (2007)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-13647",
+      "tmdbId": 13647,
+      "title": "The Invincible Iron Man (2007)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-14613",
+      "tmdbId": 14613,
+      "title": "Next Avengers: Heroes of Tomorrow (2008)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
     },
     {
       "uid": "tv-spidey-super-stories",
       "tmdbId": 15178,
       "title": "Spidey Super Stories (segments of The Electric Company, 1974–1977)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
     },
     {
       "uid": "tv-spider-man-toei-1978",
       "tmdbId": 2640,
       "title": "Spider-Man (Japanese live-action TV series, 1978)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
     },
     {
       "uid": "tv-fred-barney-meet-thing",
       "tmdbId": 2271,
       "title": "Fred and Barney Meet the Thing (1979)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
     },
     {
       "uid": "m-dracula-sovereign-of-the-damned",
       "tmdbId": 90450,
       "title": "Dracula: Sovereign of the Damned (1980)",
       "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
     },
     {
       "uid": "m-monster-of-frankenstein-1981",
       "tmdbId": 3066,
       "title": "The Monster of Frankenstein (1981)",
       "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
     },
     {
       "uid": "tv-incredible-hulk-animated-1982-s1",
       "tmdbId": 11328,
       "title": "The Incredible Hulk (1982 Animated Series) (Season 1)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
     },
     {
       "uid": "tv-pryde-of-x-men-pilot",
       "tmdbId": 225656,
       "title": "X-Men: Pryde of the X-Men (1989 Pilot)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
     },
     {
       "uid": "m-power-pack-1991",
       "tmdbId": 50806,
       "title": "Power Pack (1991 Pilot TV Movie)",
       "type": "movie",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
     },
     {
       "uid": "tv-solarman-1992-pilot",
       "tmdbId": 201685,
       "title": "Solarman (1992 Pilot)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
     },
     {
       "uid": "tv-ultraforce-1995",
       "tmdbId": 29807,
       "title": "Ultraforce (1995)",
       "type": "tv",
-      "universe": "PRE-MCU",
-      "category": "PRE-MCU"
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-blade-blood-thirsty",
+      "tmdbId": 1277512,
+      "title": "Blade: Blood Thirsty (2005 short)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-blade-house-of-chthon-2007",
+      "tmdbId": 32219,
+      "title": "Blade: House of Chthon (2007 TV Movie / pilot cut)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-394355",
+      "tmdbId": 394355,
+      "title": "Hulk Vs. (Hulk vs. Thor / Hulk vs. Wolverine)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-30675",
+      "tmdbId": 30675,
+      "title": "Planet Hulk (2010)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-63686",
+      "tmdbId": 63686,
+      "title": "Thor: Tales of Asgard (2011)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-230896",
+      "tmdbId": 230896,
+      "title": "Iron Man & Hulk: Heroes United (2013)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-169934",
+      "tmdbId": 169934,
+      "title": "Iron Man: Rise of Technovore (2013)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-253617",
+      "tmdbId": 253617,
+      "title": "LEGO Marvel Super Heroes: Maximum Overload (2013)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-phineas-and-ferb-mission-marvel",
+      "tmdbId": 284019,
+      "title": "Phineas and Ferb: Mission Marvel (2013 TV Special)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-ultimate-wolverine-vs-hulk-motion-comic",
+      "tmdbId": 220848,
+      "title": "Ultimate Wolverine vs. Hulk (Motion Comic, 2013)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-wolverine-origin-motion-comic",
+      "tmdbId": 219225,
+      "title": "Wolverine: Origin (Motion Comic, 2013)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-257346",
+      "tmdbId": 257346,
+      "title": "Avengers Confidential: Black Widow & Punisher (2014)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-eternals-motion-comic-2014",
+      "tmdbId": 375211,
+      "title": "Eternals (Marvel Knights Motion Comic, 2014)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-284274",
+      "tmdbId": 284274,
+      "title": "Iron Man & Captain America: Heroes United (2014)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-wolverine-versus-sabretooth-motion-comic",
+      "tmdbId": 79936,
+      "title": "Wolverine Versus Sabretooth (Motion Comic, 2014)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-368304",
+      "tmdbId": 368304,
+      "title": "LEGO Marvel Super Heroes: Avengers Reassembled! (2015)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-372631",
+      "tmdbId": 372631,
+      "title": "Marvel Super Hero Adventures: Frost Fight! (2015)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-wolverine-versus-sabretooth-reborn-motion-comic",
+      "tmdbId": 93331,
+      "title": "Wolverine Versus Sabretooth: Reborn (Motion Comic, 2015)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-422153",
+      "tmdbId": 422153,
+      "title": "Hulk: Where Monsters Dwell (2016)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-509080",
+      "tmdbId": 509080,
+      "title": "LEGO Marvel Super Heroes: Guardians of the Galaxy – The Thanos Threat (2017)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-528222",
+      "tmdbId": 528222,
+      "title": "LEGO Marvel Super Heroes: Black Panther – Trouble in Wakanda (2018)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-491633",
+      "tmdbId": 491633,
+      "title": "Marvel Rising: Secret Warriors (2018)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-622230",
+      "tmdbId": 622230,
+      "title": "LEGO Marvel Spider-Man: Vexed by Venom (2019)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-marvel-rising-battle-of-the-bands",
+      "tmdbId": 592687,
+      "title": "Marvel Rising: Battle of the Bands (2019)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-576743",
+      "tmdbId": 576743,
+      "title": "Marvel Rising: Chasing Ghosts (2019)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-marvel-rising-heart-of-iron",
+      "tmdbId": 583209,
+      "title": "Marvel Rising: Heart of Iron (2019)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-592688",
+      "tmdbId": 592688,
+      "title": "Marvel Rising: Operation Shuri (2019)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-592689",
+      "tmdbId": 592689,
+      "title": "Marvel Rising: Playing with Fire (2019)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "tv-lego-marvel-climate-conundrum",
+      "tmdbId": 112851,
+      "title": "LEGO Marvel Avengers: Climate Conundrum (2020)",
+      "type": "tv",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-lego-marvel-avengers-time-twisted-2022",
+      "tmdbId": 940543,
+      "title": "LEGO Marvel Avengers: Time Twisted (2022)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-1154598",
+      "tmdbId": 1154598,
+      "title": "LEGO Marvel Avengers: Code Red (2023)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-1359227",
+      "tmdbId": 1359227,
+      "title": "LEGO Marvel Avengers: Mission Demolition (2024)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-spidey-iron-man-avengers-team-up-2025",
+      "tmdbId": 1564058,
+      "title": "Marvel's Spidey and Iron Man: Avengers Team-Up! (2025 special)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
+    },
+    {
+      "uid": "m-spidey-avengers-halloween-team-up-2026",
+      "tmdbId": 1750432,
+      "title": "Spidey and the Avengers: Halloween Team-Up! (2026 special)",
+      "type": "movie",
+      "universe": "OUT-MCU",
+      "category": "OUT-MCU"
     }
   ]
 }
